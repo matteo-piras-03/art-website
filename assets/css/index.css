@@ -198,8 +198,8 @@ li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -45%);
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 80%;
+    max-height: 80%;
     padding: 0px;
 }
 
@@ -254,6 +254,11 @@ li {
     #section-0-right{
         width: 90%;
         margin: 5px;
+    }
+
+    #modal-view img{
+        max-width: 90%;
+        max-height: 90%;
     }
 
 }
