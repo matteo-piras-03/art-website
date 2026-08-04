@@ -1,0 +1,152 @@
+
+.hidden{
+    display: none;
+}
+
+.relative{
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+.active {
+    background-color: var(--selected-color);
+}
+
+#main{
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+#main h1{
+    font-family: "Reddit Sans", sans-serif;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+#main p{
+  font-size: 1.6rem;
+  padding: 20px;
+  border: 3px solid red;
+  border-radius: 20px;
+  width: 480px;
+
+  display: none;
+  opacity: 0;
+  transition:
+    opacity 1s,
+    display 1s allow-discrete;
+}
+
+#main p.showing {
+  opacity: 1;
+  display: block;
+}
+
+@starting-style {
+  #main p.showing {
+    opacity: 0;
+  }
+}
+
+#section-0 img{
+    display: block;
+    margin: 0px auto;
+    max-width: 20rem;
+    max-height: 20rem;
+    border-radius: 1.5rem;
+}
+
+#section-0{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    margin: 20px auto;
+}
+
+#section-0 p{
+    text-align: justify;
+}
+
+#section-0-left{
+    width: 55%;
+    margin: 10px;
+}
+
+#section-0-right{
+    width: 45%;
+    margin: 10px;
+}
+
+#section-0 h1{
+    text-align: center;
+}
+
+#section-0 a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#section-0 a:hover{
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+#section-1{
+    width: 100%;
+    color: var(--primary-color);
+    margin: 40px auto;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: baseline;
+    text-align: center;
+    gap: 16px;
+    padding: 0px;
+    margin: 30px 0px;
+    box-sizing: border-box;
+}
+
+.gallery li{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.gallery a:hover{
+    transition: transform 0.25s ease, z-index;
+}
+
+.gallery img{
+    max-width: 368px;
+    width: auto;
+    height: 276px;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+#nav_1_mobile{
+    display: none;
+}
+
+#footer-mobile{
+    display: none;
+    flex-wrap: wrap;
+}

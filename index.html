@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Home - pirAs03</title>
+
+        <style>
+            html {
+                visibility: hidden;
+            }
+        </style>
+
+        <script>
+            const theme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", theme);
+            document.documentElement.style.visibility = "visible";
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/mobile_pages.css">
+
+        <script src="assets/js/mobile.js" defer></script>
+        <script src="assets/js/index.js" defer></script>
+        <script src="assets/js/navbar.js" defer></script>
+    </head>
+    <body>
+        <nav id="nav">
+            <div id="nav-container">
+                <div id="nav_left">
+                    <a href="index.html">pirAs03</a>
+                </div>
+                <div id="nav_right">
+                    <a href="art.html">Art</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="warmups.html">Warmups</a>
+                    <button id="toggledarkmode"></button>
+                </div>
+            </div>
+        </nav>
+        
+        <article id="main">
+            <div id="section-0">
+                <div id="section-0-left">
+                    <img src="assets/images/hrnt_pfp.jpeg" id="logo" alt="HRNT - 47c">
+                    <h1>pirAs03</h1>
+                    <p>Hello! My name is Matteo Piras, I'm a 22 years old male from Italy. I'm currently an electronics engineer student, but as a hobby I started drawing seriously on late 2025.
+                    Currently a <a href="https://drawabox.com" target="_blank">Drawabox</a> student and nothing else, so everything you see here was born by trial and error. I also like cooking and videogames!</p>
+                </div>
+                <div id="section-0-right">
+                    <h1>No commissions! (yet...)</h1>
+                    <div class="gray-line"></div>
+                    <h1>Art Socials</h1>
+                    <ul class="buttons-list">
+                        <li><a href="https://www.instagram.com/pirasdraws._/" target="_blank" class="button"><span>Instagram</span></a></li>
+                        <li><a href="https://bsky.app/profile/piras03.bsky.social" target="_blank" class="button"><span>Bluesky</span></a></li>
+                        <li><a href="https://artfight.net/~Piras03" target="_blank" class="button"><span>Artfight</span></a></li>
+                    </ul>
+                    <h1>Other Socials</h1>
+                    <ul class="buttons-list">
+                        <li><a href="https://www.youtube.com/@piras03" target="_blank" class="button"><span>YouTube</span></a></li>
+                        <li><a href="https://steamcommunity.com/id/piras03/" target="_blank" class="button"><span>Steam</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gray-line"></div>
+            <div id="section-1">
+                <h1>Featured Art</h1>
+                <ul class="gallery">
+                </ul>
+            </div>
+            <div id="modal-view"></div>
+        </article>
+        <footer id="footer">
+            <div id="footer-container">
+                <h1>Matteo Piras | pirAs03</h1>
+                <p>© 2025-2026 All rights reserved.</p>
+                <a href="#top">Back to top</a>
+            </div>
+        </footer>
+    </body>
+</html>

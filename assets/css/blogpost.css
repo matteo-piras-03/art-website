@@ -1,0 +1,87 @@
+.active {
+    background-color: var(--selected-color);
+}
+
+#main{
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+#back-button{
+    display: inline-block;
+    width: auto;
+    margin: 20px 0px 10px 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#back-button:hover{
+    transition: background-color 0.3s ease;
+    background-color: var(--a-background-color);
+    color: var(--accent-color);
+}
+
+h1{
+    font-family: "Reddit Sans", sans-serif;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin: 40px 0px 30px 0.5rem;
+}
+
+.title{
+    margin: 5px 10px 5px 0px;
+    font-size: 2.5rem;
+}
+
+.date{
+    margin: 10px 0px 1rem 1rem;
+    color:var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.description{
+    margin: 0px 0px 0px 1rem;
+    color:var(--secondary-color);
+    font-size: 1rem;
+}
+
+#section-0{
+    width: 100%;
+    color: var(--secondary-color);
+    margin: 0px 0px;
+    padding: 0px;
+}
+
+#section-0 h1{
+    color: var(--primary-color);
+    margin: 30px 0px;
+}
+
+#section-0 a{
+    text-decoration: none;
+    color: var(--selected-color-full);
+}
+
+#section-0 a:hover{
+    text-decoration: underline;
+}
+
+#section-0 p{
+    text-align: justify;
+}
+
+#section-0 ul{
+    list-style-type: disc;
+    color: var(--primary-color);
+}
+
+#section-0 li{
+    margin: 5px 0px;
+    color: var(--secondary-color);
+}
+

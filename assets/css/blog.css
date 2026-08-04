@@ -1,0 +1,100 @@
+.hidden{
+    display: none;
+}
+
+.relative{
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+.active {
+    background-color: var(--selected-color);
+}
+
+#main{
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: "Reddit Sans", sans-serif;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin: 40px 0px 30px 10px;
+}
+
+#section-0{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    margin: 0px 0px;
+    padding: 0px;
+}
+
+#section-0 li{
+    margin: 8px;
+    width: 72rem;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section-0 a{
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    display: block;
+    width: 95%;
+    height: 100%;
+    text-decoration: none;
+    border: 1px solid;
+    border-color: var(--light-border-color);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+#section-0 a:hover{
+    color: var(--accent-color);
+    text-decoration: none;
+    border-color: var(--selected-color-full);
+    background-color: var(--background-color);
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title{
+    margin: 5px 0px;
+    font-size: 1.5rem;
+}
+
+.date{
+    color:var(--secondary-color);
+    font-size: 0.8rem;
+}
+
+.description{
+    font-size: 0.9rem;
+}
+
+#nav_1_mobile{
+    display: none;
+}
+
+#footer-mobile{
+    display: none;
+    flex-wrap: wrap;
+}

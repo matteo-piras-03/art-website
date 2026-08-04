@@ -1,0 +1,127 @@
+:root {
+    --general-width: 72rem;
+}
+
+[data-theme="dark"] {
+    --primary-color: #f5f5f5;
+    --secondary-color: #aaaaaa;
+    --background-color: rgba(255, 255, 255, 0.04);
+    --a-background-color: rgba(255, 255, 255, 0.3);
+    --accent-color: #ffffff;
+    --selected-color: #32af628c;
+    --selected-color-full: #32af62;
+    --border-color: #dcdcdc;
+    --light-border-color: rgba(255, 255, 255, 0.1);;
+    --invisible-color: rgba(255, 255, 255, 0.0);
+    --background-gradient: linear-gradient(to bottom, #1c291f, #171920);
+}
+
+[data-theme="light"] {
+    --primary-color: #000000;
+    --secondary-color: #222222;
+    --background-color: rgba(255, 255, 255, 0.2);
+    --a-background-color: rgba(0, 0, 0, 0.4);
+    --accent-color: #000000;
+    --selected-color: #32af628c;
+    --selected-color-full: #166d37;
+    --border-color: #333333;
+    --invisible-color: rgba(255, 255, 255, 0.0);
+    --background-gradient: linear-gradient(to bottom, #c7e7ce, #c2c8e2);
+}
+
+html {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 16px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: var(--background-gradient);
+}
+
+#nav {
+    height: 48px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    font-size: 1rem;
+}
+
+#nav-container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+#nav a{
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#nav a:hover{
+    transition: background-color 0.3s ease;
+    background-color: var(--a-background-color);
+    color: var(--accent-color);
+}
+
+.nav-divider{
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.gray-line{
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+#nav_left{
+    font-family: "Reddit Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+#nav_right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 230px;
+}
+
+#nav_right a{
+    margin: 0px 10px;
+}
+
+#nav_right button{
+    border: none;
+    border-radius: 25%;
+    background-color: var(--a-background-color);
+    padding: 5px;
+    margin: 0px 10px;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nav_right button:hover{
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+
+#shopping-cart-icon{
+    height: 20px;
+}
+
+.chevron-down{
+    height:8px
+}

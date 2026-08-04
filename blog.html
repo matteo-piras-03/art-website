@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Blog - pirAs03</title>
+
+        <style>
+            html {
+                visibility: hidden;
+            }
+        </style>
+
+        <script>
+            const theme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", theme);
+            document.documentElement.style.visibility = "visible";
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/blog.css">
+        <link rel="stylesheet" href="assets/css/mobile_pages.css">
+
+        <script src="assets/js/mobile.js" defer></script>
+        <script src="assets/js/navbar.js" defer></script>
+    </head>
+    <body>
+        <nav id="nav">
+            <div id="nav-container">
+                <div id="nav_left">
+                    <a href="index.html">pirAs03</a>
+                </div>
+                <div id="nav_right">
+                    <a href="art.html">Art</a>
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="warmups.html">Warmups</a>
+                    <button id="toggledarkmode"></button>
+                </div>
+            </div>
+        </nav>
+        <article id="main">
+            <h1>Blog</h1>
+            <ul id="section-0">
+                <li>
+                    <a href="blog/v1-0.html">
+                        <div class="top">
+                            <h1 class="title">v1.0</h1>
+                            <span class="date">Aug 21, 2026</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="description">Info on the development of this website.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog/about-me.html">
+                        <div class="top">
+                            <h1 class="title">About Me</h1>
+                            <span class="date">Aug 21, 2026</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="description">More info about my drawing career.</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </body>
+</html>

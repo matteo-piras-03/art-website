@@ -1,0 +1,219 @@
+
+.relative{
+    position: relative;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+#nav_left a{
+    background-color: var(--selected-color);
+}
+
+#main{
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+#main h1{
+    font-family: "Reddit Sans", sans-serif;
+    font-size: 2rem;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+#section-0 img{
+    display: block;
+    margin: 0px auto;
+    max-width: 20rem;
+    max-height: 20rem;
+    border-radius: 1.5rem;
+}
+
+#section-0{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    margin: 20px auto;
+}
+
+#section-0 p{
+    text-align: justify;
+}
+
+#section-0-left{
+    width: 55%;
+    margin: 10px;
+}
+
+#section-0-left a{
+    text-decoration: none;
+    color: var(--selected-color-full);
+}
+
+#section-0-left a:hover{
+    text-decoration: underline;
+}
+
+#section-0-right{
+    width: 45%;
+    margin: 10px;
+}
+
+#section-0 h1{
+    text-align: center;
+}
+
+.button{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Reddit Sans", sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.button:hover{
+    transition: background-color 0.3s ease;
+    background-color: var(--a-background-color);
+    color: var(--accent-color);
+}
+
+.buttons-list{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-0 li{
+    margin: 8px 0px;
+    height: 32px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-1{
+    width: 100%;
+    color: var(--primary-color);
+    margin: 40px auto;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: baseline;
+    text-align: center;
+    gap: 16px;
+    padding: 0px;
+    margin: 30px 0px;
+    box-sizing: border-box;
+}
+
+.gallery li{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.gallery a{
+    transition: transform 0.3s ease;
+}
+
+.gallery a:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img{
+    width: 100%;
+    height: 276px;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+#modal-view{
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease,
+                display 1s allow-discrete;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    z-index: 2;
+    margin: 0px;
+    padding: 0px;
+}
+
+#modal-view.visible{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+@starting-style{
+    #modal-view.visible{
+        opacity: 0;
+    }
+}
+
+#modal-view img{
+    transition: transform 1s ease;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    max-width: 75%;
+    max-height: 75%;
+    padding: 0px;
+}
+
+#modal-view.visible img{
+    transition: transform 1s ease;
+    transform: translate(-50%, -50%);
+}
+
+@starting-style{
+    #modal-view.visible img{
+        transform: translate(-50%, -45%);
+    }
+}
+
+#nav_1_mobile{
+    display: none;
+}
+
+#footer-mobile{
+    display: none;
+    flex-wrap: wrap;
+}
