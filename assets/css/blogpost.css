@@ -23,7 +23,7 @@
     color: var(--accent-color);
 }
 
-h1{
+#section-0 h1{
     font-family: "Reddit Sans", sans-serif;
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -33,55 +33,87 @@ h1{
     margin: 40px 0px 30px 0.5rem;
 }
 
-.title{
+#section-0 .title{
     margin: 5px 10px 5px 0px;
     font-size: 2.5rem;
 }
 
-.date{
+#section-0 .date{
     margin: 10px 0px 1rem 1rem;
     color:var(--secondary-color);
     font-size: 0.9rem;
 }
 
-.description{
+#section-0 .description{
     margin: 0px 0px 0px 1rem;
     color:var(--secondary-color);
     font-size: 1rem;
 }
 
-#section-0{
+#section-1{
     width: 100%;
     color: var(--secondary-color);
     margin: 0px 0px;
     padding: 0px;
 }
 
-#section-0 h1{
+#section-1 h1{
     color: var(--primary-color);
     margin: 30px 0px;
 }
 
-#section-0 a{
+#section-1 a{
     text-decoration: none;
     color: var(--selected-color-full);
 }
 
-#section-0 a:hover{
+#section-1 a:hover{
     text-decoration: underline;
 }
 
-#section-0 p{
+#section-1 p{
     text-align: justify;
 }
 
-#section-0 ul{
+#section-1 ul{
     list-style-type: disc;
     color: var(--primary-color);
 }
 
-#section-0 li{
+#section-1 li{
     margin: 5px 0px;
     color: var(--secondary-color);
 }
 
+@media (max-width:1280px) {
+
+    #section-0{
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    #section-1{
+        width: 90%;
+        margin: 0px auto;
+    }
+
+}
+
+@media (max-width:480px)  {
+
+    #section-0{
+        width: 95%;
+    }
+
+    #section-1{
+        width: 90%;
+        margin: 0px auto;
+    }
+
+}
+
+@media (max-width:320px){
+    #section-0 h1{
+        font-size: 1rem;
+    }
+}

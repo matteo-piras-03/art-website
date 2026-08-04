@@ -79,11 +79,6 @@ body {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.gray-line{
-    height: 1px;
-    background-color: var(--border-color);
-}
-
 #nav_left{
     font-family: "Reddit Sans", sans-serif;
     font-size: 1.25rem;
@@ -124,4 +119,23 @@ body {
 
 .chevron-down{
     height:8px
+}
+
+@media (max-width: 480px){
+
+    html{
+        font-size: 12px;
+    }
+
+    #nav {
+        height: 39px;
+    }
+
+    #nav_right{
+        min-width: 0px;
+    }
+
+    #nav_right a{
+        margin: 0px 5px;
+    }
 }
