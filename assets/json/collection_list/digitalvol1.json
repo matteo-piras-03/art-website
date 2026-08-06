@@ -1,0 +1,81 @@
+{
+    "handle": "digitalvol1",
+    "date": "2026-04-17",
+    "title": "Digital Drawings Vol.1",
+    "tags": [],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Portrait of my cat",
+            "date": "2025-10-27",
+            "caption": "Believe it or not, this is the first thing I've done on Procreate. To this day I'm still amazed."
+        },
+        {
+            "id": "02",
+            "title": "One of my colleague's OC's",
+            "date": "2025-10-31",
+            "caption": "First ever drawing from imagination. I'm calling this the classical era."
+        },
+        {
+            "id": "03",
+            "title": "Tainted Forgotten Fanart",
+            "date": "2025-11-06",
+            "caption": "Tainted Forgotten from The Binding of Isaac."
+        },
+        {
+            "id": "04",
+            "title": "Cockatiel",
+            "date": "2025-11-15",
+            "caption": "Mostly made from imagination."
+        },
+        {
+            "id": "05",
+            "title": "Sapphire Motel",
+            "date": "2025-11-25",
+            "caption": "I remember this taking forever. Tried one point perspective for the first time."
+        },
+        {
+            "id": "06",
+            "title": "Colt Fanart",
+            "date": "2025-12-02",
+            "caption": "Colt from Brawl Stars."
+        },
+        {
+            "id": "07",
+            "title": "Celeste Fanart",
+            "date": "2025-12-24",
+            "caption": "Madeline in Forgotten City from Celeste. Tried two point perspective for the first time."
+        },
+        {
+            "id": "08",
+            "title": "Lacerta Fanart",
+            "date": "2026-01-27",
+            "caption": "Lacerta from Shape of Dreams. Taking it a look today seems like seriously misproportioned."
+        },
+        {
+            "id": "09",
+            "title": "Valentines' Day",
+            "date": "2026-02-13",
+            "caption": "Champion's lounge gave a Valentine's day prompt. This is what I made."
+        },
+        {
+            "id": "10",
+            "title": "OC I can't remember the name...",
+            "date": "2026-03-04",
+            "caption": "An OC of someone I've drawn for an OC Conga. This didn't really turn out well."
+        },
+        {
+            "id": "11",
+            "title": "Sparrowsky's Birthday",
+            "date": "2026-03-08",
+            "caption": "A gift for Sparrowsky for their birthday. To this day I'm amazed by the sparrow's head."
+        },
+        {
+            "id": "12",
+            "title": "Orson's pizzeria",
+            "date": "2026-04-17",
+            "caption": "A gift for Piza. This is his OC Orson."
+        }
+    ]
+}

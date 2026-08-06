@@ -1,0 +1,75 @@
+{
+    "handle": "dabl3",
+    "date": "2026-05-08",
+    "title": "Drawabox Lesson 3",
+    "tags": ["Drawabox"],
+    "mediums": ["Felt tip Pen", "Brush Pen"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Organic Arrows",
+            "date": "2026-04-20",
+            "caption": "First page of the Organic Arrows exercise."
+        },
+        {
+            "id": "02",
+            "title": "Leaves",
+            "date": "2026-04-22",
+            "caption": "First page of the Leaves exercise."
+        },
+        {
+            "id": "03",
+            "title": "Branches",
+            "date": "2026-04-23",
+            "caption": "First page of the Branches exercise."
+        },
+        {
+            "id": "04",
+            "title": "Plant Construction 1",
+            "date": "2026-04-26",
+            "caption": "First page of untextured plant construction: Baneberry and Pasque flower."
+        },
+        {
+            "id": "05",
+            "title": "Plant Construction 2",
+            "date": "2026-05-04",
+            "caption": "Second page of untextured plant construction: English ivy and Crocus."
+        },
+        {
+            "id": "06",
+            "title": "Plant Construction 3",
+            "date": "2026-04-27",
+            "caption": "Third page of untextured plant construction: Lilac. This was tedious."
+        },
+        {
+            "id": "07",
+            "title": "Plant Construction 4",
+            "date": "2026-05-08",
+            "caption": "Fourth page of untextured plant construction: Spanish bluebell."
+        },
+        {
+            "id": "08",
+            "title": "Plant Construction 5",
+            "date": "2026-04-24",
+            "caption": "First page of textured plant construction: Daisy and Mushroom demos."
+        },
+        {
+            "id": "09",
+            "title": "Plant Construction 6",
+            "date": "2026-04-25",
+            "caption": "Second page of textured plant construction: Hibiscus and Cactus demos."
+        },
+        {
+            "id": "10",
+            "title": "Plant Construction 7",
+            "date": "2026-05-06",
+            "caption": "Third page of textured plant construction: Parasol mushroom and Stargazer lily."
+        },
+        {
+            "id": "11",
+            "title": "Plant Construction 8",
+            "date": "2026-05-08",
+            "caption": "Fourth page of textured plant construction: Saguaro cactus and Sunflower."
+        }
+    ]
+}

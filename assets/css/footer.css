@@ -29,8 +29,8 @@
 }
 
 #footer-container a{
-    padding: 5px;
-    border-radius: 5px;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
     text-decoration: none;
     color: var(--primary-color);
     margin: 10px 0px;
@@ -40,4 +40,10 @@
     color: var(--accent-color);
     transition: background-color 0.3s ease;
     background-color: var(--a-background-color);
+}
+
+@media (max-width:960px){
+    #footer-container a{
+        font-size: 1.5rem;
+    }
 }

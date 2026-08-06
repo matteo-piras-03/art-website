@@ -3,7 +3,7 @@
     position: relative;
 }
 
-.no-scroll{
+.body-noscroll{
     overflow: hidden;
 }
 
@@ -173,6 +173,7 @@ li {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
 
     z-index: 2;
     margin: 0px;
@@ -235,10 +236,19 @@ li {
 
 }
 
-@media (max-width:640px)  {
+@media (max-width:640px){
 
     #section-0{
         flex-direction: column;
+    }
+
+    #section-0 h1{
+        font-size: 2.75rem;
+        margin: 1rem 0px;
+    }
+
+    #section-0 p{
+        margin: 0.5rem 0px;
     }
 
     #section-0 img{
@@ -254,6 +264,20 @@ li {
     #section-0-right{
         width: 90%;
         margin: 5px;
+    }
+
+    #section-0-right h1{
+        font-size: 2rem;
+        margin: 1.5rem 0px;
+    }
+
+    #section-1{
+        margin-top: 30px;
+    }
+
+    #section-1 h1{
+        font-size: 2.75rem;
+        margin: 1rem 0px;
     }
 
     #modal-view img{

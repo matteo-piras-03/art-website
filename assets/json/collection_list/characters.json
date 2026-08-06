@@ -1,0 +1,33 @@
+{
+    "handle": "characters",
+    "date": "2026-06-18",
+    "title": "Characters",
+    "tags": [],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "HRNT - 47c MkII",
+            "date": "2026-06-18",
+            "caption": "Revamp of my first OC, HRNT - 47c."
+        },
+        {
+            "id": "02",
+            "title": "HRNT - 47c",
+            "date": "2026-03-01",
+            "caption": "First version of my OC. This is my main character. More info on my Art Fight profile."
+        },
+        {
+            "id": "03",
+            "title": "Makvel",
+            "date": "2026-02-03",
+            "caption": "A weird dog with electrical stuff attached to him."
+        },
+        {
+            "id": "04",
+            "title": "Sanshoo",
+            "date": "2026-05-08",
+            "caption": "A genetically modified salamander. More info on my Art Fight profile."
+        }
+    ]
+}

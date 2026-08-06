@@ -1,19 +1,19 @@
 const img_list = [
-    "assets/images/art/1.JPEG",
-    "assets/images/art/2.JPEG",
-    "assets/images/art/3.JPEG",
-    "assets/images/art/4.JPEG",
-    "assets/images/art/5.JPEG",
-    "assets/images/art/6.JPEG",
-    "assets/images/art/7.JPEG",
-    "assets/images/art/8.JPEG",
-    "assets/images/art/9.JPEG",
-    "assets/images/art/10.JPEG",
-    "assets/images/art/11.JPEG"
+    "https://media.piras03.com/image/af2026/09.jpg",
+    "https://media.piras03.com/image/af2026/07.jpg",
+    "https://media.piras03.com/image/af2026/06.jpg",
+    "https://media.piras03.com/image/af2026/05.jpg",
+    "https://media.piras03.com/image/af2026/03.jpg",
+    "https://media.piras03.com/image/af2026/04.jpg",
+    "https://media.piras03.com/image/af2026/01.jpg",
+    "https://media.piras03.com/image/dabcelebration/03.jpg",
+    "https://media.piras03.com/image/digitalvol2/05.jpg",
+    "https://media.piras03.com/image/digitalvol2/02.jpg",
+    "https://media.piras03.com/image/digitalvol2/03.jpg"
 ];
 
 function onModalClick(event){
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove('body-noscroll');
     modalView.classList.remove("visible");
 }
 
@@ -28,7 +28,7 @@ function onThumbnailClick(event){
     image.src = img_src;
     modalView.appendChild(image);
     modalView.style.top = window.pageYOffset + 'px';
-    document.body.classList.add('no-scroll');
+    document.body.classList.add('body-noscroll');
     modalView.classList.add("visible");
 }
 

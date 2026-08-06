@@ -1,0 +1,21 @@
+{
+    "handle": "coloredpencilvol1",
+    "date": "2026-05-09",
+    "title": "Colored Pencil Drawings Vol.1",
+    "tags": [],
+    "mediums": ["Colored Pencil"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Wolf with a Hammer",
+            "date": "2026-05-09",
+            "caption": "Wanted to try drawing with a colored pencil."
+        },
+        {
+            "id": "02",
+            "title": "Eagle on a Ladder",
+            "date": "2026-05-09",
+            "caption": "Wanted to try drawing with a colored pencil."
+        }
+    ]
+}

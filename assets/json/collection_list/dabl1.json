@@ -1,0 +1,93 @@
+{
+    "handle": "dabl1",
+    "date": "2025-12-26",
+    "title": "Drawabox Lesson 1",
+    "tags": ["Drawabox"],
+    "mediums": ["Felt tip Pen"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Superimposed Lines 1",
+            "date": "2025-11-10",
+            "caption": "First page of the Superimposed Lines exercise."
+        },
+        {
+            "id": "02",
+            "title": "Superimposed Lines 2",
+            "date": "2025-11-11",
+            "caption": "Second page of the Superimposed Lines exercise."
+        },
+        {
+            "id": "03",
+            "title": "Ghosted Lines",
+            "date": "2025-11-11",
+            "caption": "First page of the Ghosted Lines exercise."
+        },
+        {
+            "id": "04",
+            "title": "Ghosted planes + Ellipses in planes 1",
+            "date": "2025-11-26",
+            "caption": "First page of the Ghosted planes + ellipses in planes exercise."
+        },
+        {
+            "id": "05",
+            "title": "Ghosted planes + Ellipses in planes 2",
+            "date": "2025-11-26",
+            "caption": "Second page of the Ghosted planes + ellipses in planes exercise."
+        },
+        {
+            "id": "06",
+            "title": "Table of Ellipses 1",
+            "date": "2025-11-17",
+            "caption": "First page of the Table of Ellipses exercise."
+        },
+        {
+            "id": "07",
+            "title": "Table of Ellipses 2",
+            "date": "2025-11-17",
+            "caption": "Second page of the Table of Ellipses exercise."
+        },
+        {
+            "id": "08",
+            "title": "Funnels",
+            "date": "2025-11-30",
+            "caption": "First page of the Funnels exercise."
+        },
+        {
+            "id": "09",
+            "title": "Plotted Perspective",
+            "date": "2025-12-02",
+            "caption": "First page of the Plotted Perspective exercise."
+        },
+        {
+            "id": "10",
+            "title": "Rough Perspective 1",
+            "date": "2025-12-04",
+            "caption": "First page of the Rough Perspective exercise."
+        },
+        {
+            "id": "11",
+            "title": "Rough Perspective 2",
+            "date": "2025-12-07",
+            "caption": "Second page of the Rough Perspective exercise."
+        },
+        {
+            "id": "12",
+            "title": "Rotated Boxes",
+            "date": "2025-12-13",
+            "caption": "First page of the Rotated Boxes exercise, dommed to be called a boss of this lesson."
+        },
+        {
+            "id": "13",
+            "title": "Organic Perspective 1",
+            "date": "2025-12-20",
+            "caption": "First page of the Organic Perspective exercise."
+        },
+        {
+            "id": "14",
+            "title": "Organic Perspective 2",
+            "date": "2025-12-26",
+            "caption": "Second page of the Organic Perspective exercise."
+        }
+    ]
+}

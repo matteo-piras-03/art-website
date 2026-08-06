@@ -1,0 +1,39 @@
+{
+    "handle": "digitalvol2",
+    "date": "2026-06-13",
+    "title": "Digital Drawings Vol.2",
+    "tags": [],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Unnatural",
+            "date": "2026-04-26",
+            "caption": "Decided to separate this because this was a period of time where stuff started to click."
+        },
+        {
+            "id": "02",
+            "title": "Argali",
+            "date": "2026-05-17",
+            "caption": "An OC made from a fantasy prompt."
+        },
+        {
+            "id": "03",
+            "title": "Piormighen",
+            "date": "2026-05-27",
+            "caption": "An OC made from a fish prompt."
+        },
+        {
+            "id": "04",
+            "title": "Misunderstood by the world",
+            "date": "2026-06-22",
+            "caption": "This is vent art."
+        },
+        {
+            "id": "05",
+            "title": "Duek",
+            "date": "2026-06-13",
+            "caption": "A gift for Duek, since he was feeling down at that time."
+        }
+    ]
+}

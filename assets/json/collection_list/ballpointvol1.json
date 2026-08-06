@@ -1,0 +1,51 @@
+{
+    "handle": "ballpointvol1",
+    "date": "2026-06-22",
+    "title": "Ballpoint Pen Drawings Vol.1",
+    "tags": [],
+    "mediums": ["Ballpoint Pen"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Dragon",
+            "date": "2026-04-19",
+            "caption": "A dragon drawing (how exciting...)."
+        },
+        {
+            "id": "02",
+            "title": "Pirate 1",
+            "date": "2026-04-18",
+            "caption": "Trying ballpoint for the first time."
+        },
+        {
+            "id": "03",
+            "title": "Sparrow holding a pencil",
+            "date": "2026-04-29",
+            "caption": "Inspired by Sparrowsky's OC."
+        },
+        {
+            "id": "04",
+            "title": "Airport drawing",
+            "date": "2026-04-29",
+            "caption": "Had to pass time somehow."
+        },
+        {
+            "id": "05",
+            "title": "Pirate 2",
+            "date": "2026-04-18",
+            "caption": "Trying ballpoint for the first time."
+        },
+        {
+            "id": "06",
+            "title": "Soldier Extravaganza",
+            "date": "2026-06-06",
+            "caption": "Did a WW1 type of thing."
+        },
+        {
+            "id": "07",
+            "title": "Canoe's Cassidy",
+            "date": "2026-06-22",
+            "caption": "From a discussion in a Discord server."
+        }
+    ]
+}

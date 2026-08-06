@@ -1,0 +1,51 @@
+{
+    "handle": "dab2025winterprompt",
+    "date": "2026-01-01",
+    "title": "Drawabox Winter Promptathon 2025",
+    "tags": ["Promptathon"],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Day 1: Club Recruitment Poster",
+            "date": "2025-12-26",
+            "caption": "Dipping my toes in the Drawabox community."
+        },
+        {
+            "id": "02",
+            "title": "Day 2: The Great Gig Apocalypse",
+            "date": "2025-12-27",
+            "caption": "Getting accustomed with my drawings quality."
+        },
+        {
+            "id": "03",
+            "title": "Day 3: Unwarranted Tactical Unit",
+            "date": "2025-12-28",
+            "caption": "To this day, this drawing is still unfinished."
+        },
+        {
+            "id": "04",
+            "title": "Day 4: Biggest Thing You Shouldn't Climb",
+            "date": "2025-12-29",
+            "caption": "You can tell one of my favorite games from here."
+        },
+        {
+            "id": "05",
+            "title": "Day 5: The Answer is Bananas",
+            "date": "2025-12-30",
+            "caption": "I like this one quite a lot."
+        },
+        {
+            "id": "06",
+            "title": "Day 6: Board Game Night",
+            "date": "2025-12-31",
+            "caption": "Alien checkers, how interesting!"
+        },
+        {
+            "id": "07",
+            "title": "Day 7: Vehicle of your Dreams",
+            "date": "2026-01-01",
+            "caption": "Finishing off with a sunset."
+        }
+    ]
+}

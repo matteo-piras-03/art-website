@@ -1,0 +1,87 @@
+{
+    "handle": "dabl2",
+    "date": "2026-04-15",
+    "title": "Drawabox Lesson 2",
+    "tags": ["Drawabox"],
+    "mediums": ["Felt tip Pen", "Brush Pen"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Organic Arrows 1",
+            "date": "2026-02-24",
+            "caption": "First page of the Organic Arrows exercise."
+        },
+        {
+            "id": "02",
+            "title": "Organic Arrows 2",
+            "date": "2026-02-26",
+            "caption": "Second page of the Organic Arrows exercise."
+        },
+        {
+            "id": "03",
+            "title": "Sausages with Contour Ellipses",
+            "date": "2026-02-28",
+            "caption": "First page of the Sausages with Contour Ellipses exercise."
+        },
+        {
+            "id": "04",
+            "title": "Sausages with Contour Lines",
+            "date": "2026-02-30",
+            "caption": "First page of the Sausages with Contour Lines exercise."
+        },
+        {
+            "id": "05",
+            "title": "Texture Analysis",
+            "date": "2026-03-07",
+            "caption": "First page of the Texture Analysis exercise."
+        },
+        {
+            "id": "06",
+            "title": "Dissections 1",
+            "date": "2026-03-20",
+            "caption": "First page of the Dissections exercise."
+        },
+        {
+            "id": "07",
+            "title": "Dissections 2",
+            "date": "2026-04-05",
+            "caption": "Second page of the Dissections exercise."
+        },
+        {
+            "id": "08",
+            "title": "Form Intersections 1",
+            "date": "2026-04-07",
+            "caption": "First page of the Form Intersections exercise."
+        },
+        {
+            "id": "09",
+            "title": "Form Intersections 2",
+            "date": "2026-04-08",
+            "caption": "Second page of the Form Intersections exercise."
+        },
+        {
+            "id": "10",
+            "title": "Form Intersections 3",
+            "date": "2026-04-10",
+            "caption": "Third page of the Form Intersections exercise."
+        },
+        {
+            "id": "11",
+            "title": "Form Intersections 4",
+            "date": "2026-04-14",
+            "caption": "Fourth page of the Form Intersections exercise."
+        },
+        {
+            "id": "12",
+            "title": "Organic Intersections 1",
+            "date": "2026-04-15",
+            "caption": "First page of the Organic Intersections exercise."
+        },
+        {
+            "id": "13",
+            "title": "Organic Intersections 2",
+            "date": "2026-04-217",
+            "caption": "Second page of the Organic Intersections exercise."
+        }
+    ]
+}

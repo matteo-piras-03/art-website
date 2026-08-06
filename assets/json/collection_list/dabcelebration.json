@@ -1,0 +1,27 @@
+{
+    "handle": "dabcelebration",
+    "date": "2026-06-18",
+    "title": "Drawabox Celebrational Drawings",
+    "tags": ["Drawabox"],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Boxmancer",
+            "date": "2026-02-19",
+            "caption": "Celebration of the completion of the 250 box challenge."
+        },
+        {
+            "id": "02",
+            "title": "Training",
+            "date": "2026-04-18",
+            "caption": "Celebration of the completion of Lesson 2."
+        },
+        {
+            "id": "03",
+            "title": "Greenhouse",
+            "date": "2026-06-02",
+            "caption": "Celebration of the completion of Lesson 3."
+        }
+    ]
+}

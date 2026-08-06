@@ -1,0 +1,39 @@
+{
+    "handle": "pencilvol1",
+    "date": "2026-04-05",
+    "title": "Pencil Drawings Vol.1",
+    "tags": [],
+    "mediums": ["Graphite Pencil"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Seal Studies 1",
+            "date": "2026-02-15",
+            "caption": "Decided to study seals for gesture."
+        },
+        {
+            "id": "02",
+            "title": "Figure 1",
+            "date": "2026-03-09",
+            "caption": "Figure study 1."
+        },
+        {
+            "id": "03",
+            "title": "Figure 2",
+            "date": "2026-03-11",
+            "caption": "Figure study 2."
+        },
+        {
+            "id": "04",
+            "title": "Misunderstood by the world",
+            "date": "2026-02-15",
+            "caption": "Decided to study seals for gesture."
+        },
+        {
+            "id": "05",
+            "title": "Scientist Drake",
+            "date": "2026-04-05",
+            "caption": "Designed a scientist drake after a conversation with Sparrowsky."
+        }
+    ]
+}

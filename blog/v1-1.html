@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>About Me - Blog - pirAs03</title>
+
+        <style>
+            html {
+                visibility: hidden;
+            }
+        </style>
+
+        <script>
+            const theme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", theme);
+            document.documentElement.style.visibility = "visible";
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../assets/css/navbar.css">
+        <link rel="stylesheet" href="../assets/css/blogpost.css">
+
+        <script src="../assets/js/navbar.js" defer></script>
+    </head>
+    <body>
+        <nav id="nav">
+            <div id="nav-container">
+                <div id="nav_left">
+                    <a href="../index.html">pirAs03</a>
+                </div>
+                <div id="nav_right">
+                    <a href="../art.html">Art</a>
+                    <a href="../blog.html" class="active">Blog</a>
+                    <a href="../warmups.html">Warmups</a>
+                    <button id="toggledarkmode"></button>
+                </div>
+            </div>
+        </nav>
+        <article id="main">
+            <div id="section-0">
+                <a href="../blog.html" id="back-button">Back to Blog</a>
+                <h1 class="title">v1.1</h1>
+                <h2 class="date">Aug 6, 2026</h2>
+                <span class="description">Art gallery update.</span>
+            </div>
+            <div id="section-1">
+                <p>
+                    Hello folks! I worked hard for this update, mostly because I was trying to do some things that I haven't done before.
+                    If you know about the "So you want the be a pilot" kind of thing, that's what I'm refering to.
+                </p>
+                <h1>Changelog</h1>
+                <ul>
+                    <li>Added the <a href="../art.html">Art Gallery</a>, where drawings are organized in albums that have a date of the most recent drawing, tags and mediums</li>
+                    <li>Added a simple sort menu for dates, and a filter system for mediums and tags in the Art Gallery</li>
+                    <li>Drawings are loaded via Javascript and JSON files containing all information required</li>
+                    <li>Stored the images in an R2 cloudflare bucket</li>
+                    <li>More media queries for a better mobile experience</li>
+                </ul>
+                <h1>Feedback</h1>
+                <p>
+                    If you manage to find bugs or if you want to give feedback feel free to dm piras03 on <a href="https://discord.com">Discord</a>.
+                </p>
+                <h1>Next steps</h1>
+                <ul>
+                    <li>Add svgs for the menu and light/dark mode button</li>
+                    <li>Add a warmup generator with a timer</li>
+                </ul>
+            </div>
+        </article>
+    </body>
+</html>

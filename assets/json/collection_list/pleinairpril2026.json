@@ -1,0 +1,45 @@
+{
+    "handle": "pleinairpril2026",
+    "date": "2026-05-01",
+    "title": "Plein Airpril 2026",
+    "tags": ["Landscape Studies"],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Rock Formation 1",
+            "date": "2026-04-02",
+            "caption": "Study of a rock formation."
+        },
+        {
+            "id": "02",
+            "title": "Rock Formation 2",
+            "date": "2026-04-03",
+            "caption": "Study of another rock formation. How exciting."
+        },
+        {
+            "id": "03",
+            "title": "Tree 1",
+            "date": "2026-04-06",
+            "caption": "Study of a tree."
+        },
+        {
+            "id": "04",
+            "title": "Tree 2",
+            "date": "2026-04-09",
+            "caption": "Study of a bonsai tree, but a bit differently."
+        },
+        {
+            "id": "05",
+            "title": "Tree 3",
+            "date": "2026-04-10",
+            "caption": "Study of a third tree, with interesting colors."
+        },
+        {
+            "id": "06",
+            "title": "Las Tronas, Alguer",
+            "date": "2026-05-01",
+            "caption": "Plein Air painting of a real place."
+        }
+    ]
+}

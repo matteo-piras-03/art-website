@@ -1,0 +1,51 @@
+{
+    "handle": "dab2026summerprompt",
+    "date": "2026-06-30",
+    "title": "Drawabox Summer Promptathon 2026",
+    "tags": ["Promptathon"],
+    "mediums": ["Digital", "Graphite Pencil"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Day 1: Goblin Bake Sale",
+            "date": "2026-06-24",
+            "caption": "This one is kind of special because it's the first Promptathon where I used CSP. Also I never drew goblins before."
+        },
+        {
+            "id": "02",
+            "title": "Day 2: Personified Houseplant",
+            "date": "2026-06-25",
+            "caption": "Had a wild idea but the executional part wasn't that good."
+        },
+        {
+            "id": "03",
+            "title": "Day 3: A for for grownups",
+            "date": "2026-06-26",
+            "caption": "I like the perspective on this one. I also used subdivisions like lesson 6."
+        },
+        {
+            "id": "04",
+            "title": "Day 4: Folklore Food Service",
+            "date": "2026-06-27",
+            "caption": "That delivery box looks so squishy..."
+        },
+        {
+            "id": "05",
+            "title": "Day 5: RPG Sports Drink",
+            "date": "2026-06-28",
+            "caption": "Glow. Glow. More Glow."
+        },
+        {
+            "id": "06",
+            "title": "Day 6: Overbred Luxury Fantasy Pets",
+            "date": "2026-06-29",
+            "caption": "I had an exam rejected, so the mood was really low. As such, I wanted to do this in traditional."
+        },
+        {
+            "id": "07",
+            "title": "Day 7: Mall Wars",
+            "date": "2026-06-30",
+            "caption": "The shocking news still lingered quite a bit, but had less effect."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "handle": "felttipvol1",
+    "date": "2026-06-03",
+    "title": "Fineliner Drawings Vol.1",
+    "tags": [],
+    "mediums": ["Felt tip Pen"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Crow Ninja",
+            "date": "2026-06-03",
+            "caption": "Still exploring this crow ninja idea."
+        }
+    ]
+}

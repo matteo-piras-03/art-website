@@ -1,0 +1,81 @@
+{
+    "handle": "dabl4",
+    "date": "2026-06-09",
+    "title": "Drawabox Lesson 4",
+    "tags": ["Drawabox"],
+    "mediums": ["Felt tip Pen", "Brush Pen"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Sausages with Contour Curves 1",
+            "date": "2026-05-14",
+            "caption": "First page of the Sausages with Contour Curves exercise."
+        },
+        {
+            "id": "02",
+            "title": "Sausages with Contour curves 2",
+            "date": "2026-05-15",
+            "caption": "Second page of the Sausages with Contour Curves exercise."
+        },
+        {
+            "id": "03",
+            "title": "Insect Construction 1",
+            "date": "2026-05-25",
+            "caption": "First page of untextured insect construction: Odonata (Dragonfly)."
+        },
+        {
+            "id": "04",
+            "title": "Insect Construction 2",
+            "date": "2026-05-27",
+            "caption": "Second page of untextured insect construction: Red Paper Wasp."
+        },
+        {
+            "id": "05",
+            "title": "Insect Construction 3",
+            "date": "2026-05-28",
+            "caption": "Third page of untextured insect construction: Mantid Fly"
+        },
+        {
+            "id": "06",
+            "title": "Insect Construction 4",
+            "date": "2026-05-30",
+            "caption": "Fourth page of untextured insect construction: Hercules Beetle."
+        },
+        {
+            "id": "07",
+            "title": "Insect Construction 5",
+            "date": "2026-05-21",
+            "caption": "First page of textured insect construction: Black Widow demo."
+        },
+        {
+            "id": "08",
+            "title": "Insect Construction 6",
+            "date": "2026-05-23",
+            "caption": "Second page of textured insect construction: House Fly demo."
+        },
+        {
+            "id": "09",
+            "title": "Insect Construction 7",
+            "date": "2026-06-02",
+            "caption": "Third page of textured insect construction: Fire Ant."
+        },
+        {
+            "id": "10",
+            "title": "Insect Construction 8",
+            "date": "2026-06-04",
+            "caption": "Fourth page of textured insect construction: Mole Cricket."
+        },
+        {
+            "id": "11",
+            "title": "Insect Construction 9",
+            "date": "2026-06-06",
+            "caption": "Fifth page of textured insect construction: Camel Spider."
+        },
+        {
+            "id": "12",
+            "title": "Insect Construction 10",
+            "date": "2026-06-09",
+            "caption": "Sixth page of textured insect construction: Lobster (crustaceans are allowed on this lesson)."
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "handle": "af2026",
+    "date": "2026-08-02",
+    "title": "Art Fight 2026",
+    "tags": ["Art Fight"],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "9 AM Pils",
+            "date": "2026-07-03",
+            "caption": "Character: Canoe's Cassidy. I call this the start of a new era, and possibly settling my artstyle."
+        },
+        {
+            "id": "02",
+            "title": "Finn Revenge!",
+            "date": "2026-07-04",
+            "caption": "Character: FINNTASTIC's Finn. Got a revenge on one of my defenses."
+        },
+        {
+            "id": "03",
+            "title": "Ominous Rooftops",
+            "date": "2026-07-07",
+            "caption": "Character: Kavel's Gravel. Tried a rough setting."
+        },
+        {
+            "id": "04",
+            "title": "Cloudy High Noon",
+            "date": "2026-07-12",
+            "caption": "Character: Sssasa. Starting for stuff to come out really good."
+        },
+        {
+            "id": "05",
+            "title": "Blessed Run",
+            "date": "2026-07-15",
+            "caption": "Character: qrqrqr0515's Petan. Here stuff started to get really serious..."
+        },
+        {
+            "id": "06",
+            "title": "Firework Joyride",
+            "date": "2026-07-21",
+            "caption": "Character: DecroJR's Dart. Didn't really like it, but cool regardless."
+        },
+        {
+            "id": "07",
+            "title": "Villain Paramedic",
+            "date": "2026-07-24",
+            "caption": "Character: Sparrowsky's Luigi. Here I was totally immersed in the drawing. I felt like I was there."
+        },
+        {
+            "id": "08",
+            "title": "Final Showdown",
+            "date": "2026-07-30",
+            "caption": "Characters: Arquebus' Aeshys and arti's Oman. Unfortunately I did not want to do this drawing, like at all."
+        },
+        {
+            "id": "09",
+            "title": "Winter Skiing",
+            "date": "2026-08-01",
+            "caption": "Same thing as the Villain Paramedic one. At the time of writing this, I consider this my best drawing so far. The brushstrokes are really clean."
+        }
+    ]
+}

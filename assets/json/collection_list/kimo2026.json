@@ -1,0 +1,100 @@
+{
+    "handle": "kimo2026",
+    "date": "2026-03-27",
+    "title": "Kimodabmeshi 2026",
+    "tags": ["Figure Studies"],
+    "mediums": ["Digital"],
+    "drawings": [
+        {
+            "id": "05",
+            "title": "Figure 5",
+            "date": "2026-03-27",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "01",
+            "title": "Figure 1",
+            "date": "2026-03-07",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "02",
+            "title": "Figure 2",
+            "date": "2026-03-06",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "03",
+            "title": "Figure 3",
+            "date": "2026-03-05",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "04",
+            "title": "Figure 4",
+            "date": "2026-03-02",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "06",
+            "title": "Figure 6",
+            "date": "2026-03-08",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "07",
+            "title": "Figure 7",
+            "date": "2026-03-15",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "08",
+            "title": "Figure 8",
+            "date": "2026-03-16",
+            "caption": "Study of a figure."
+        }
+        ,
+        {
+            "id": "09",
+            "title": "Figure 9",
+            "date": "2026-03-17",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "10",
+            "title": "Figure 10",
+            "date": "2026-03-18",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "11",
+            "title": "Figure 11",
+            "date": "2026-03-19",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "12",
+            "title": "Figure 12",
+            "date": "2026-03-20",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "13",
+            "title": "Figure 13",
+            "date": "2026-03-22",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "14",
+            "title": "Figure 14",
+            "date": "2026-03-23",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "15",
+            "title": "Figure 15",
+            "date": "2026-03-24",
+            "caption": "Study of a figure."
+        }
+    ]
+}
