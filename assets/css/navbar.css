@@ -1,5 +1,6 @@
 :root {
     --general-width: 72rem;
+    --dark-mode-percentage: 100%;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
     --menu-color: #28342a;
     --background-gradient: linear-gradient(to bottom, #1c291f, #171920);
     --modal-background-color: #3f504354;
+    --invert-percentage: 100%;
 }
 
 [data-theme="light"] {
@@ -32,6 +34,7 @@
     --menu-color: #d8eedd;
     --background-gradient: linear-gradient(to bottom, #c7e7ce, #c2c8e2);
     --modal-background-color: #c7e7cec2;
+    --invert-percentage: 0%;
 }
 
 html {
@@ -48,6 +51,10 @@ body {
     margin: 0px;
     padding: 0px;
     background: var(--background-gradient);
+}
+
+.hidden{
+    display: none;
 }
 
 #nav {
@@ -105,10 +112,10 @@ body {
     border: none;
     border-radius: 25%;
     background-color: var(--a-background-color);
-    padding: 5px;
+    padding: 0px;
     margin: 0px 10px;
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -116,10 +123,27 @@ body {
 #nav_right button:hover{
     background-color: var(--primary-color);
     transition: background-color 0.3s ease;
+    --dark-mode-percentage: 0%;
 }
 
-.chevron-down{
-    height:8px
+#nav_right button img{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    margin: auto;
+    transition: filter 0.3s ease;
+}
+
+#dark{
+    filter: invert(var(--dark-mode-percentage));
+}
+
+#light{
+    filter: invert(calc(100% - var(--dark-mode-percentage)));
+}
+
+#nav_right button img.hidden{
+    display: none;
 }
 
 @media (max-width: 480px){

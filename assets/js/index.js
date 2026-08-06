@@ -27,7 +27,6 @@ function onThumbnailClick(event){
     const image = document.createElement("img");
     image.src = img_src;
     modalView.appendChild(image);
-    modalView.style.top = window.pageYOffset + 'px';
     document.body.classList.add('body-noscroll');
     modalView.classList.add("visible");
 }

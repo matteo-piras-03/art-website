@@ -167,7 +167,7 @@ li {
     display: none;
     transition: opacity 0.5s ease,
                 display 1s allow-discrete;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     height: 100%;

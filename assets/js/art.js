@@ -17,8 +17,37 @@ function setupMenuToggles(){
     const menus = section.querySelectorAll('.menu');
     const buttons = section.querySelectorAll('button[id$="-select"]');
 
+    function renderMenuButton(menu, menuButton) {
+        if (!menuButton) return;
+        const isOpen = menu.classList.contains('open');
+        const chevron = `<img class="${isOpen ? 'flipped' : ''}" src="assets/svg/chevron-down-svgrepo-com.svg">`;
+        const menuType = menu.parentElement && menu.parentElement.id === 'sort' ? 'radio' : 'checkbox';
+
+        if (menuType === 'radio') {
+            const selected = menu.querySelector('button.selected');
+            const label = selected ? selected.textContent.trim() : 'Sort';
+            menuButton.innerHTML = `<span>${label}</span>${chevron}`;
+            return;
+        }
+
+        const selectedCount = menu.querySelectorAll('button.selected').length;
+        const label = menu.parentElement.id === 'medium' ? 'All mediums' : 'All tags';
+        const text = selectedCount > 0 ? `${selectedCount} selected` : label;
+        menuButton.innerHTML = `<span>${text}</span>${chevron}`;
+
+        const clearButton = menu.querySelector('button.last');
+        if (clearButton) {
+            clearButton.classList.toggle('disabled', selectedCount === 0);
+        }
+    }
+
     function closeAllMenus(){
-        menus.forEach(menu => menu.classList.remove('open'));
+        menus.forEach(menu => {
+            menu.classList.remove('open');
+            const parent = menu.parentElement;
+            const menuButton = parent && parent.querySelector('button[id$="-select"]');
+            renderMenuButton(menu, menuButton);
+        });
     }
 
     buttons.forEach(button => {
@@ -34,31 +63,13 @@ function setupMenuToggles(){
             if (!isOpen) {
                 menu.classList.add('open');
             }
+            renderMenuButton(menu, button);
         });
     });
 
     menus.forEach(menu => {
         const parent = menu.parentElement;
-        const menuType = parent && parent.id === 'sort' ? 'radio' : 'checkbox';
         const menuButton = parent && parent.querySelector('button[id$="-select"]');
-
-        function updateMenuLabel(){
-            if (!menuButton) return;
-            if (menuType === 'radio') {
-                const selected = menu.querySelector('button.selected');
-                menuButton.textContent = selected ? selected.textContent.trim() : 'Sort';
-                return;
-            }
-
-            const selectedCount = menu.querySelectorAll('button.selected').length;
-            const label = parent.id === 'medium' ? 'All mediums' : 'All tags';
-            menuButton.textContent = selectedCount > 0 ? `${selectedCount} selected` : label;
-
-            const clearButton = menu.querySelector('button.last');
-            if (clearButton) {
-                clearButton.classList.toggle('disabled', selectedCount === 0);
-            }
-        }
 
         menu.addEventListener('click', event => {
             event.stopPropagation();
@@ -73,11 +84,12 @@ function setupMenuToggles(){
                     return;
                 }
                 menu.querySelectorAll('button.selected').forEach(item => item.classList.remove('selected'));
-                updateMenuLabel();
+                renderMenuButton(menu, menuButton);
                 applyFilters();
                 return;
             }
 
+            const menuType = parent && parent.id === 'sort' ? 'radio' : 'checkbox';
             if (menuType === 'radio') {
                 menu.querySelectorAll('button.selected').forEach(item => item.classList.remove('selected'));
                 button.classList.add('selected');
@@ -85,12 +97,12 @@ function setupMenuToggles(){
                 button.classList.toggle('selected');
             }
 
-            updateMenuLabel();
+            renderMenuButton(menu, menuButton);
             applyFilters();
             sortCards();
         });
 
-        updateMenuLabel();
+        renderMenuButton(menu, menuButton);
     });
 
     document.addEventListener('click', closeAllMenus);
@@ -203,8 +215,13 @@ function setupCardCarousel(card = document.querySelector('#card2')){
     leftButton.type = 'button';
     rightButton.type = 'button';
 
-    let currentIndex = 0;
-    targetCard.dataset.carouselIndex = '0';
+    const parsedIndex = Number.parseInt(targetCard.dataset.carouselIndex || '0', 10);
+    const initialIndex = Number.isInteger(parsedIndex) && parsedIndex >= 0 && parsedIndex < images.length
+        ? parsedIndex
+        : 0;
+
+    let currentIndex = initialIndex;
+    targetCard.dataset.carouselIndex = String(initialIndex);
     targetCard.dataset.carouselLength = String(images.length);
 
     function showImage(index){
@@ -241,7 +258,20 @@ function setupCardCarousel(card = document.querySelector('#card2')){
     });
 
     targetCard.dataset.carouselBound = 'true';
-    showImage(0);
+    showImage(initialIndex);
+}
+
+function getStartingCarouselIndex(drawings, thumbnailId){
+    if (!Array.isArray(drawings) || !drawings.length) {
+        return 0;
+    }
+
+    if (thumbnailId === undefined || thumbnailId === null || thumbnailId === '') {
+        return 0;
+    }
+
+    const matchingIndex = drawings.findIndex(drawing => String(drawing.id) === String(thumbnailId));
+    return matchingIndex >= 0 ? matchingIndex : 0;
 }
 
 //Data gathering
@@ -279,10 +309,13 @@ function onGetCDJson(json){
         return;
     }
 
+    const drawings = json.drawings || [];
+
     const card = document.createElement('a');
     card.className = 'card';
     card.href = '#';
-    card.dataset.carouselIndex = '0';
+    const initialCarouselIndex = getStartingCarouselIndex(drawings, json['thumbnail-id']);
+    card.dataset.carouselIndex = String(initialCarouselIndex);
     card.addEventListener('click', event => {
         event.preventDefault();
         openCollectionModal(json, Number(card.dataset.carouselIndex) || 0, card);
@@ -291,7 +324,6 @@ function onGetCDJson(json){
     const imgCarousel = document.createElement('div');
     imgCarousel.className = 'img-carousel';
 
-    const drawings = json.drawings || [];
     const baseUrl = `https://media.piras03.com/image/${json.handle}/`;
 
     drawings.forEach((drawing, index) => {
@@ -384,7 +416,6 @@ function openCollectionModal(json, initialIndex = 0, sourceCard = null){
     const latestDrawing = [...drawings].sort((first, second) => new Date(second.date) - new Date(first.date))[0] || drawings[0];
 
     modal.innerHTML = '';
-    modal.style.top = `${window.pageYOffset}px`;
     modal.classList.add('visible');
     document.body.classList.add('body-noscroll');
 
