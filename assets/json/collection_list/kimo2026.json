@@ -2,16 +2,10 @@
     "handle": "kimo2026",
     "date": "2026-03-27",
     "title": "Kimodabmeshi 2026",
-    "thumbnail-id": "01",
+    "thumbnail-id": "05",
     "tags": ["Figure Studies"],
     "mediums": ["Digital"],
     "drawings": [
-        {
-            "id": "05",
-            "title": "Figure 5",
-            "date": "2026-03-27",
-            "caption": "Study of a figure."
-        },
         {
             "id": "01",
             "title": "Figure 1",
@@ -34,6 +28,12 @@
             "id": "04",
             "title": "Figure 4",
             "date": "2026-03-02",
+            "caption": "Study of a figure."
+        },
+        {
+            "id": "05",
+            "title": "Figure 5",
+            "date": "2026-03-27",
             "caption": "Study of a figure."
         },
         {

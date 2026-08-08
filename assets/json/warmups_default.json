@@ -1,0 +1,76 @@
+{
+    "exercises": [
+        {
+            "index": "0",
+            "label": "Superimposed Lines"
+        },
+        {
+            "index": "1",
+            "label": "Ghosted Lines"
+        },
+        {
+            "index": "2",
+            "label": "Ghosted Planes"
+        },
+        {
+            "index": "3",
+            "label": "Table of Ellipses"
+        },
+        {
+            "index": "4",
+            "label": "Ellipses in Planes"
+        },
+        {
+            "index": "5",
+            "label": "Funnels"
+        },
+        {
+            "index": "6",
+            "label": "Plotted Perspective"
+        },
+        {
+            "index": "7",
+            "label": "Rough Perspective"
+        },
+        {
+            "index": "8",
+            "label": "Rotated Boxes"
+        },
+        {
+            "index": "9",
+            "label": "Organic Perspective"
+        },
+        {
+            "index": "10",
+            "label": "Organic Arrows"
+        },
+        {
+            "index": "11",
+            "label": "Sausages with Contour Curves"
+        },
+        {
+            "index": "12",
+            "label": "Texture Analysis"
+        },
+        {
+            "index": "13",
+            "label": "Dissections"
+        },
+        {
+            "index": "14",
+            "label": "Form Intersections"
+        },
+        {
+            "index": "15",
+            "label": "Organic Intersections"
+        },
+        {
+            "index": "27",
+            "label": "Boxes"
+        },
+        {
+            "index": "28",
+            "label": "Cylinders"
+        }
+    ]
+}

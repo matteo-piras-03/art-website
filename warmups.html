@@ -19,13 +19,13 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="assets/css/navbar.css">
-        <link rel="stylesheet" href="assets/css/footer.css">
         <link rel="stylesheet" href="assets/css/warmups.css">
 
         <script src="assets/js/navbar.js" defer></script>
+        <script src="assets/js/first_time_load.js" defer></script>
+        <script src="assets/js/warmups.js" defer></script>
     </head>
     <body>
         <nav id="nav">
@@ -42,7 +42,63 @@
             </div>
         </nav>
         <article id="main">
-            <h1>Work in Progress</h1>
+            <h1>Warmup Generator</h1>
+            <div id="section-0">
+                <a id="generator" class="active" href="#">Generator</a>
+                <a id="exercises" href="warmups/settings.html">Exercises & Settings</a>
+            </div>
+            <div id="section-1">
+                <h2>The exercise chosen is:</h2>
+                <div id="exercise">
+                    <div id="title-bar">
+                        <h1 id="title"></h1>
+                        <span id="group"></span><span id="subgroup"></span>
+                    </div>
+                    <div id="img-and-buttons">
+                        <img src="">
+                        <div id="timer-and-score">
+                            <div id="timer-block" class="">
+                                <h1>Timer</h1>
+                                <div id="timer-input" class="">
+                                    <input type="number" name="timer-minutes" id="timer-minutes" placeholder="MM" maxlength="2" value="05" min="0" max="60">
+                                    <span id="colon">:</span>
+                                    <input type="number" name="timer-seconds" id="timer-seconds" placeholder="SS" maxlength="2" value="00" min="0" max="59">
+                                </div>
+                                <div id="timer" class="hidden">05:00</div>
+                                <div id="timer-buttons">
+                                    <button id="start">Start</button>
+                                    <button id="reset">Reset</button>
+                                </div>
+                            </div>
+                            <div id="score-block" class="hidden">
+                                <h1>How did the exercise go?</h1>
+                                <div id="score-buttons">
+                                    <button id="bad">Bad... (-1)</button>
+                                    <button id="okay">Okay (0)</button>
+                                    <button id="good">Good! (+1)</button>
+                                </div>
+                                <div id="checkmark" class="hidden">
+                                    That's fine!
+                                </div>
+                            </div>
+                            <button id="skip" class="">Skip exercise</button>
+                            <button id="next" class="hidden">Next exercise</button>
+                        </div>
+                    </div>
+                    <div id="instructions-and-goal">
+                        <div id="instructions">
+                            <h1>Instructions</h1>
+                            <p>
+                            </p>
+                        </div>
+                        <div id="goal">
+                            <h1>Goal</h1>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
         <footer id="footer">
             <div id="footer-container">

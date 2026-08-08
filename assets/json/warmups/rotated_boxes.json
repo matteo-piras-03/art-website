@@ -1,0 +1,7 @@
+{
+    "group": "Drawabox",
+    "subgroup": "Lesson 1: Lines, Ellipses and Boxes",
+    "thumbnail": "https://d15v304a6xpq4b.cloudfront.net/lesson_images/9a2db6a0.jpg",
+    "instructions": "Draw two perpendicular axes. Then, draw a square centered on the axes, ensuring its sides are parallel to the axes. Place another square at the end of each axis. Draw the rest of the central box, then draw a neighbouring box, making sure it gets rotated. Repeat this process for the rest of the boxes. For detailed instructions, click <a href='https://drawabox.com/lesson/1/rotatedboxes' target='_blank'>here</a>.",
+    "goal": "This exercise removes the direct consideration of vanishing points, and brings the attention back to the things we're actually drawing, which exist within the page or canvas we're working on."
+}

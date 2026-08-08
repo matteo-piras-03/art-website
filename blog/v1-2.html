@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>v1.1 - Blog - pirAs03</title>
+        <title>v1.2 - Blog - pirAs03</title>
 
         <style>
             html {
@@ -42,23 +42,30 @@
         <article id="main">
             <div id="section-0">
                 <a href="../blog.html" id="back-button">Back to Blog</a>
-                <h1 class="title">v1.1</h1>
-                <h2 class="date">Aug 6, 2026</h2>
-                <span class="description">Art gallery update.</span>
+                <h1 class="title">v1.2</h1>
+                <h2 class="date">Aug 8, 2026</h2>
+                <span class="description">Warmup generator update.</span>
             </div>
             <div id="section-1">
                 <p>
-                    Hello folks! I worked hard for this update, mostly because I was trying to do some things that I haven't done before.
-                    If you know about the "So you want the be a pilot" kind of thing, that's what I'm refering to.
+                    Hello folks! Another update has been released, and this time there was so much hard stuff to implement. But I really wanted to do this, so here's what I added.
                 </p>
                 <h1>Changelog</h1>
+                <p>Added the <a href="../warmups.html">Warmup Generator</a>, where users are able to randomly select warmup exercises for drawing. All data gets stored in the local browser's storage.</p>
                 <ul>
-                    <li>Added the <a href="../art.html">Art Gallery</a>, where drawings are organized in albums that have a date of the most recent drawing, tags and mediums</li>
-                    <li>Added a simple sort menu for dates, and a filter system for mediums and tags in the Art Gallery</li>
-                    <li>Drawings are loaded via Javascript and JSON files containing all information required</li>
-                    <li>Stored the images in an R2 cloudflare bucket</li>
-                    <li>More media queries for a better mobile experience</li>
-                    <li>Fixed a bug in the modal view on mobile</li>
+                    <li>The top section has two buttons: one leads to the generator page, the other to the exercise page</li>
+                    <li>The warmup page allows the user to generate a random warmup chosen from the exercises activated in the exercise page</li>
+                    <li>When loaded for the first time, users will have activated all of the Lesson 1 & 2 exercises, plus the Boxes and Cylinders from Drawabox, with the lowest score set</li>
+                    <li>Lower scored exercises have a higher chance of appearing than higher scored exercises</li>
+                    <li>The page includes a programmable timer and a skip button to change exercise. When the timer elapses the user is prompted with a score choice, which can change the exercise's score.</li>
+                    <li>The exercises page allows the user to modify the exercise pool and the score of the exercise</li>
+                </ul>
+                <p>
+                    Other additions:
+                </p>
+                <ul>
+                    <li>Cleanup of the CSS files</li>
+                    <li>Changed the blog main font color to a higher contrast color</li>
                 </ul>
                 <h1>Feedback</h1>
                 <p>
@@ -66,8 +73,10 @@
                 </p>
                 <h1>Next steps</h1>
                 <ul>
-                    <li><s>Add svgs for the menu and light/dark mode button</s></li>
-                    <li>Add a warmup generator with a timer</li>
+                    <li>Include brokendraw's exercises</li>
+                    <li>Cleaning up the exercises thumbnails, possibly by exercises made from me (up to Lesson 5)</li>
+                    <li>Being able to add customizable exercises</li>
+                    <li>Being able to import/export data</li>
                 </ul>
             </div>
         </article>

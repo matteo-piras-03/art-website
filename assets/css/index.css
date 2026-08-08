@@ -1,315 +1,461 @@
-
-.relative{
-    position: relative;
+:root {
+  --general-width: 72rem;
+  --dark-mode-percentage: 100%;
 }
 
-.body-noscroll{
-    overflow: hidden;
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: var(--background-gradient);
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+#main {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+[data-theme=dark] {
+  --primary-color: #f5f5f5;
+  --secondary-color: #aaaaaa;
+  --background-color: rgba(255, 255, 255, 0.05);
+  --a-background-color: rgba(255, 255, 255, 0.2);
+  --accent-color: #ffffff;
+  --selected-color: #32af628c;
+  --selected-color-full: #32af62;
+  --border-color: #dcdcdc;
+  --light-border-color: rgba(255, 255, 255, 0.1);
+  --invisible-color: rgba(255, 255, 255, 0.0);
+  --menu-color: #28342a;
+  --background-gradient: linear-gradient(to bottom, #1c291f, #171920);
+  --modal-background-color: #3f504354;
+  --invert-percentage: 100%;
+}
+
+[data-theme=light] {
+  --primary-color: #000000;
+  --secondary-color: #464646;
+  --background-color: rgba(255, 255, 255, 0.3);
+  --a-background-color: rgba(0, 0, 0, 0.2);
+  --accent-color: #000000;
+  --selected-color: #32af628c;
+  --selected-color-full: #2b9955;
+  --border-color: #222222;
+  --light-border-color: rgba(0, 0, 0, 0.2);
+  --invisible-color: rgba(255, 255, 255, 0.0);
+  --menu-color: #d8eedd;
+  --background-gradient: linear-gradient(to bottom, #c7e7ce, #c2c8e2);
+  --modal-background-color: #c7e7cec2;
+  --invert-percentage: 0%;
+}
+
+.active {
+  background-color: var(--selected-color);
+}
+
+#nav {
+  height: 53.5px;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  font-size: 1rem;
+}
+#nav #nav-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+#nav a {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+#nav a:hover {
+  transition: background-color 0.3s ease;
+  background-color: var(--a-background-color);
+  color: var(--accent-color);
+}
+#nav #nav_left {
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+#nav #nav_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 15rem;
+}
+#nav #nav_right a {
+  margin: 0px 0.5rem;
+}
+#nav #nav_right button {
+  border: none;
+  border-radius: 25%;
+  background-color: var(--a-background-color);
+  padding: 0px;
+  margin: 0px 10px;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#nav #nav_right button:hover {
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+  --dark-mode-percentage: 0%;
+}
+#nav #nav_right button img {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  margin: auto;
+  transition: filter 0.3s ease;
+}
+#nav #nav_right button img.hidden {
+  display: none;
+}
+#nav #nav_right button #dark {
+  filter: invert(var(--dark-mode-percentage));
+}
+#nav #nav_right button #light {
+  filter: invert(calc(100% - var(--dark-mode-percentage)));
+}
+
+@media (max-width: 480px) {
+  #nav {
+    height: 39px;
+  }
+  #nav #nav_right {
+    min-width: 0px;
+  }
+  #nav #nav_right a {
+    margin: 0px 5px;
+  }
+}
+#footer {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+#footer #footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  max-width: 72rem;
+  margin: 25px 10px 5px 10px;
+}
+#footer #footer-container h1 {
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  margin: 0px;
+}
+#footer #footer-container p {
+  color: var(--secondary-color);
+  margin: 12px 0px 16px 0px;
+}
+#footer #footer-container a {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin: 10px 0px;
+}
+#footer #footer-container a:hover {
+  color: var(--accent-color);
+  transition: background-color 0.3s ease;
+  background-color: var(--a-background-color);
+}
+
+@media (max-width: 960px) {
+  #footer-container a {
+    font-size: 1.5rem;
+  }
+}
+.body-noscroll {
+  overflow: hidden;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-#nav_left a{
-    background-color: var(--selected-color);
+#main {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+#main h1 {
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 2rem;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
-#main{
-    max-width: 72rem;
-    margin: 0 auto;
+.gray-line {
+  height: 1px;
+  background-color: var(--border-color);
 }
 
-#main h1{
-    font-family: "Reddit Sans", sans-serif;
-    font-size: 2rem;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
+#section-0 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-color);
+  margin: 20px auto;
+}
+#section-0 h1 {
+  text-align: center;
+}
+#section-0 #section-0-left {
+  width: 55%;
+  margin: 10px;
+}
+#section-0 #section-0-left img {
+  display: block;
+  margin: 0px auto;
+  max-width: 20rem;
+  max-height: 20rem;
+  border-radius: 1.5rem;
+}
+#section-0 #section-0-left a {
+  text-decoration: none;
+  color: var(--selected-color-full);
+}
+#section-0 #section-0-left a:hover {
+  text-decoration: underline;
+}
+#section-0 #section-0-left p {
+  text-align: justify;
+}
+#section-0 #section-0-right {
+  width: 45%;
+  margin: 10px;
+}
+#section-0 #section-0-right .buttons-list {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section-0 #section-0-right .buttons-list li {
+  margin: 8px 0px;
+  height: 32px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-0 #section-0-right .buttons-list li .button {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+}
+#section-0 #section-0-right .buttons-list li .button:hover {
+  transition: background-color 0.3s ease;
+  background-color: var(--a-background-color);
+  color: var(--accent-color);
 }
 
-.gray-line{
-    height: 1px;
-    background-color: var(--border-color);
+#section-1 {
+  width: 100%;
+  color: var(--primary-color);
+  margin: 40px auto;
+}
+#section-1 .gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: baseline;
+  text-align: center;
+  gap: 16px;
+  padding: 0px;
+  margin: 30px 0px;
+  box-sizing: border-box;
+}
+#section-1 .gallery li {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+  box-sizing: border-box;
+}
+#section-1 .gallery li a {
+  transition: transform 0.3s ease;
+}
+#section-1 .gallery li a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+#section-1 .gallery li a img {
+  width: 100%;
+  height: 276px;
+  object-position: center;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 1.5rem;
 }
 
-#section-0 img{
-    display: block;
-    margin: 0px auto;
-    max-width: 20rem;
-    max-height: 20rem;
-    border-radius: 1.5rem;
+#modal-view {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease, display 1s allow-discrete;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  margin: 0px;
+  padding: 0px;
 }
-
-#section-0{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--primary-color);
-    margin: 20px auto;
+#modal-view.visible {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
 }
-
-#section-0 p{
-    text-align: justify;
-}
-
-#section-0-left{
-    width: 55%;
-    margin: 10px;
-}
-
-#section-0-left a{
-    text-decoration: none;
-    color: var(--selected-color-full);
-}
-
-#section-0-left a:hover{
-    text-decoration: underline;
-}
-
-#section-0-right{
-    width: 45%;
-    margin: 10px;
-}
-
-#section-0 h1{
-    text-align: center;
-}
-
-.button{
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    font-family: "Reddit Sans", sans-serif;
-    font-size: 1.25rem;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-}
-
-.button:hover{
-    transition: background-color 0.3s ease;
-    background-color: var(--a-background-color);
-    color: var(--accent-color);
-}
-
-.buttons-list{
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#section-0 li{
-    margin: 8px 0px;
-    height: 32px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#section-1{
-    width: 100%;
-    color: var(--primary-color);
-    margin: 40px auto;
-}
-
-.gallery{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    vertical-align: baseline;
-    text-align: center;
-    gap: 16px;
-    padding: 0px;
-    margin: 30px 0px;
-    box-sizing: border-box;
-}
-
-.gallery li{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    position: relative;
-    box-sizing: border-box;
-}
-
-.gallery a{
-    transition: transform 0.3s ease;
-}
-
-.gallery a:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery img{
-    width: 100%;
-    height: 276px;
-    object-position: center;
-    object-fit: cover;
-    overflow: hidden;
-    border-radius: 1.5rem;
-}
-
-#modal-view{
+@starting-style {
+  #modal-view.visible {
     opacity: 0;
-    display: none;
-    transition: opacity 0.5s ease,
-                display 1s allow-discrete;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-
-    z-index: 2;
-    margin: 0px;
-    padding: 0px;
+  }
 }
-
-#modal-view.visible{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
+#modal-view.visible img {
+  transition: transform 1s ease;
+  transform: translate(-50%, -50%);
 }
-
-@starting-style{
-    #modal-view.visible{
-        opacity: 0;
-    }
-}
-
-#modal-view img{
-    transition: transform 1s ease;
-    position: relative;
-    top: 50%;
-    left: 50%;
+@starting-style {
+  #modal-view.visible img {
     transform: translate(-50%, -45%);
-    max-width: 80%;
-    max-height: 80%;
-    padding: 0px;
+  }
+}
+#modal-view img {
+  transition: transform 1s ease;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  max-width: 80%;
+  max-height: 80%;
+  padding: 0px;
 }
 
-#modal-view.visible img{
-    transition: transform 1s ease;
-    transform: translate(-50%, -50%);
+@media (max-width: 1280px) {
+  #section-0 {
+    width: 90%;
+  }
+  #section-1 {
+    width: 90%;
+  }
+  #section-1 #section-1-right .gray-line {
+    width: 100%;
+  }
+  .gray-line {
+    width: 90%;
+    margin: 0px auto;
+  }
+}
+@media (max-width: 640px) {
+  #section-0 {
+    flex-direction: column;
+  }
+  #section-0 h1 {
+    font-size: 2.75rem;
+    margin: 1rem 0px;
+  }
+  #section-0 #section-0-left {
+    width: 90%;
+    margin: 5px;
+  }
+  #section-0 #section-0-left img {
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+  #section-0 #section-0-left p {
+    margin: 0.5rem 0px;
+  }
+  #section-0 #section-0-right {
+    width: 90%;
+    margin: 5px;
+  }
+  #section-0 #section-0-right h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0px;
+  }
+  #section-1 {
+    margin-top: 30px;
+  }
+  #section-1 h1 {
+    font-size: 2.75rem;
+    margin: 1rem 0px;
+  }
+  #modal-view img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+@media (max-width: 480px) {
+  #section-0 {
+    width: 95%;
+  }
+  #section-0 #section-0-left {
+    width: 95%;
+  }
+  #section-0 #section-0-right {
+    width: 95%;
+  }
+  #section-0 #section-0-right .gray-line {
+    width: 100%;
+  }
+  #section-1 {
+    width: 95%;
+  }
+  .gray-line {
+    width: 95%;
+    margin: 0px auto;
+  }
 }
 
-@starting-style{
-    #modal-view.visible img{
-        transform: translate(-50%, -45%);
-    }
-}
-
-@media (max-width:1280px) {
-
-    #section-0{
-        width: 90%;
-    }
-
-    #section-1{
-        width: 90%;
-    }
-
-    .gray-line{
-        width: 90%;
-        margin: 0px auto;
-    }
-
-    #section-1-right .gray-line{
-        width: 100%;
-    }
-
-}
-
-@media (max-width:640px){
-
-    #section-0{
-        flex-direction: column;
-    }
-
-    #section-0 h1{
-        font-size: 2.75rem;
-        margin: 1rem 0px;
-    }
-
-    #section-0 p{
-        margin: 0.5rem 0px;
-    }
-
-    #section-0 img{
-        max-width: 15rem;
-        max-height: 15rem;
-    }
-
-    #section-0-left{
-        width: 90%;
-        margin: 5px;
-    }
-
-    #section-0-right{
-        width: 90%;
-        margin: 5px;
-    }
-
-    #section-0-right h1{
-        font-size: 2rem;
-        margin: 1.5rem 0px;
-    }
-
-    #section-1{
-        margin-top: 30px;
-    }
-
-    #section-1 h1{
-        font-size: 2.75rem;
-        margin: 1rem 0px;
-    }
-
-    #modal-view img{
-        max-width: 90%;
-        max-height: 90%;
-    }
-
-}
-
-@media (max-width:480px)  {
-    #section-0{
-        width: 95%;
-    }
-
-    #section-0-left{
-        width: 95%;
-    }
-
-    #section-0-right{
-        width: 95%;
-    }
-
-    #section-1{
-        width: 95%;
-    }
-
-    .gray-line{
-        width: 95%;
-        margin: 0px auto;
-    }
-
-    #section-1-right .gray-line{
-        width: 100%;
-    }
-}
+/*# sourceMappingURL=index.css.map */

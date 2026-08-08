@@ -1,0 +1,543 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Warmup settings - pirAs03</title>
+
+        <style>
+            html {
+                visibility: hidden;
+            }
+        </style>
+
+        <script>
+            const theme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", theme);
+            document.documentElement.style.visibility = "visible";
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../assets/css/settings.css">
+
+        <script src="../assets/js/navbar.js" defer></script>
+        <script src="../assets/js/first_time_load.js" defer></script>
+        <script src="../assets/js/settings.js" defer></script>
+    </head>
+    <body>
+        <nav id="nav">
+            <div id="nav-container">
+                <div id="nav_left">
+                    <a href="../index.html">pirAs03</a>
+                </div>
+                <div id="nav_right">
+                    <a href="../art.html">Art</a>
+                    <a href="../blog.html">Blog</a>
+                    <a href="../warmups.html" class="active">Warmups</a>
+                    <button id="toggledarkmode"><img id="dark" src="../assets/svg/moon-stars-svgrepo-com.svg"><img id="light" src="../assets/svg/sun-svgrepo-com.svg" class="hidden"></button>
+                </div>
+            </div>
+        </nav>
+        <article id="main">
+            <h1>Warmup Generator</h1>
+            <div id="section-0">
+                <a id="generator" href="../warmups.html">Generator</a>
+                <a id="exercises" class="active" href="#">Exercises & Settings</a>
+            </div>
+            <div id="section-1" class="">
+                <h1>Exercises list</h1>
+                <p>Exercises with a higher score have a lower chance to appear.</p>
+                <ul id="exercises-list">
+                    <div>
+                        <li>
+                        <button class="outer-button">
+                            <div><span>Drawabox</span></div>
+                            <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                        </button>
+                        </li>
+                        <ul class="hidden">
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Lesson 1: Lines, Ellipses and Boxes</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Superimposed Lines</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Ghosted Lines</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Ghosted Planes</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Table of Ellipses</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Ellipses in Planes</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Funnels</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Plotted Perspective</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Rough Perspective</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Rotated Boxes</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Organic Perspective</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Lesson 2: Contour Lines, Textures and Construction</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Organic Arrows</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Sausages with Contour Curves</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Texture Analysis</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Dissections</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Form Intersections</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Organic Intersections</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Lesson 3: Applying Construction to Plants</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Leaves</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Branches</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Plant Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Lesson 4: Applying Construction to Insects</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Insect Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Lesson 5: Applying Construction to Animals</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Bird Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Non-hooved quadruped Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Hooved quadruped Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Random Animal Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Lesson 6: Applying Construction to Everyday Objects</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Everyday Object Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Lesson 7: Applying Construction to Vehicles</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Form Intersection Vehicle</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Vehicle Construction</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Challenges</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Boxes</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Cylinders</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Wheels</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Treasure Chests</span></div>
+                                        <input type="range" name="score" min="1" max="5" value="0">
+                                    </button>
+                                </li>
+                            </ul>
+                        </ul>
+                        <li>
+                            <!--- TBI
+                        <button class="outer-button">
+                            <div><span>brokendraw</span></div>
+                            <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                        </button>
+                        </li>
+                        <ul class="hidden">
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 1: Mechanics</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Point Coordination</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Coin Flips</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 2: Visual Coordination</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Reflections</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Silhouettes</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Extrusion</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 3: Form Construction</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Projection</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Rotating Cylinders</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Box Compositions</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Rotation</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 4: Form Manipulation</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Addition</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Slicing</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Stacking</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Clustering</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Bending</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 5: Form Interpretation</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Organic Volumes</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Softening</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Figure Contours</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 6: Rendering</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>2 Value Study</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Organic Textures</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Stickers</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Texture cube</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 7: Observation</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Gestures</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                            <button class="middle-button">
+                                <div><div class="indicator"></div><span>Level 8: Spatial Awareness</span></div>
+                                <img src="../assets/svg/chevron-down-svgrepo-com.svg">
+                            </button>
+                            </li>
+                            <ul class="hidden">
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Stack & Queue</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Intuitive Boxes</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                                <li  class="inner-li">
+                                    <button class="inner-button">
+                                        <div><div class="indicator"></div><span>Mega Cube Grid</span></div>
+                                        <input type="range" name="score" min="1" max="5">
+                                    </button>
+                                </li>
+                            </ul>
+                            <li>
+                        </ul>
+                    </div>
+                    -->
+                </ul>
+            </div>
+        </article>
+    </body>
+</html>
