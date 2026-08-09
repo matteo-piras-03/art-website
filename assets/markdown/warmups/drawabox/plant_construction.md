@@ -1,0 +1,1 @@
+Draw a plant from reference using construction techniques. For detailed instructions, click [here](https://drawabox.com/lesson/3/1).

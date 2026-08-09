@@ -1,0 +1,1 @@
+Place a minor axis, draw a small cylinder and a couple of ellipses inside said cylinder varying in size. Draw the hubcaps, the spokes and the tire tread, applying texture. For detailed instructions, click [here](https://drawabox.com/lesson/25wheels).

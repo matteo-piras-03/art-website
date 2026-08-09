@@ -1,0 +1,1 @@
+Establish a center flow line. Add small ellipses along the line, making sure to align their minor axis and varying their degree. Draw a segment from the first ellipse, past the second and halway to the third. Keep doin this for the whole branch. For detailed instructions, click [here](https://drawabox.com/lesson/3/2/exercisebranches).

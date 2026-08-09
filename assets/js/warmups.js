@@ -371,6 +371,19 @@ function pickWeightedExercise(exercisePool) {
     return weightedPool[weightedPool.length - 1].exercise;
 }
 
+function findCustomExerciseByLabel(customExercises, label) {
+    const normalizedLabel = typeof label === "string" ? label.trim().toLowerCase() : "";
+
+    if (!normalizedLabel) {
+        return null;
+    }
+
+    return customExercises.find((exercise) => {
+        return exercise && typeof exercise === "object" && typeof exercise.name === "string"
+            && exercise.name.trim().toLowerCase() === normalizedLabel;
+    }) || null;
+}
+
 
 async function generateExercise() {
     const title = document.getElementById("title");
@@ -379,13 +392,13 @@ async function generateExercise() {
     const img = document.querySelector("#exercise #img-and-buttons img");
     const imgContainer = document.querySelector("#exercise #img-and-buttons");
     const instructionsh1 = document.querySelector("#exercise #instructions-and-goal #instructions h1");
-    const goalh1 = document.querySelector("#exercise #instructions-and-goal #goal h1");
-    const instructionsp = document.querySelector("#exercise #instructions-and-goal #instructions p");
-    const goalp = document.querySelector("#exercise #instructions-and-goal #goal p");
-    if (!title || !img || !instructionsp || !goalp || !group || !subgroup || !imgContainer || !instructionsh1 || !goalh1) {
+    const instructionsmd = document.querySelector("#exercise #instructions-and-goal #instructions div#instructions-content");
+    if (!title || !img || !instructionsmd || !group || !subgroup || !imgContainer || !instructionsh1) {
         return;
     }
     const storedSelections = getStoredInnerButtonSelections();
+    const customExercises = getStoredCustomExercises();
+    console.log("customExercises:", customExercises);
 
     if (storedSelections.length === 0) {
         title.textContent = "No exercises selected. Please select at least one exercise in the settings.";
@@ -393,10 +406,8 @@ async function generateExercise() {
         subgroup.textContent = "";
         img.src = "";
         imgContainer.classList.add("hidden");
-        instructionsp.textContent = "";
-        goalp.textContent = "";
+        instructionsmd.textContent = "";
         instructionsh1.textContent = "";
-        goalh1.textContent = "";
         return;
     }
 
@@ -417,29 +428,60 @@ async function generateExercise() {
         subgroup.textContent = "";
         img.src = "";
         imgContainer.classList.add("hidden");
-        instructionsp.textContent = "";
-        goalp.textContent = "";
+        instructionsmd.textContent = "";
         instructionsh1.textContent = "";
-        goalh1.textContent = "";
         return;
     }
 
     console.log("Selected Exercise:", selectedExercise);
     const label = selectedExercise.label;
+    const customExercise = selectedExercise?.isCustomExercise
+        ? findCustomExerciseByLabel(customExercises, label)
+        : null;
+
+    if (selectedExercise?.isCustomExercise) {
+        if (!customExercise) {
+            title.textContent = "Exercise data not found";
+            group.textContent = "";
+            subgroup.textContent = "";
+            img.src = "";
+            imgContainer.classList.add("hidden");
+            instructionsmd.textContent = "";
+            return;
+        }
+
+        title.textContent = label.trim();
+        group.textContent = "Custom exercises";
+        subgroup.textContent = "";
+        img.src = typeof customExercise.image === "string" ? customExercise.image.trim() : "";
+        imgContainer.classList.toggle("hidden", !img.src);
+        instructionsmd.innerHTML = typeof customExercise.instructions === "string"
+            ? DOMPurify.sanitize(marked.parse(customExercise.instructions))
+            : "";
+        resetTimer();
+        if(!checkmark.classList.contains("hidden")){
+            toggleCheckmark();
+        }
+        return;
+    }
+
     const trimmedLabel = label.replace(/\s+/g, "_").trim().toLowerCase();
     const response = await fetch(`assets/json/warmups/${trimmedLabel}.json`);
     const data = await response.json();
     if (!data) {
         title.textContent = "Exercise data not found";
         group.textContent = "";
+        subgroup.textContent = "";
+        instructionsmd.textContent = "";
         return;
     }
     title.textContent = label.trim();
     group.textContent = data.group + " > ";
     subgroup.textContent = data.subgroup;
     img.src = data.thumbnail;
-    instructionsp.innerHTML = data.instructions;
-    goalp.textContent = data.goal;
+    const markdownResponse = await fetch("assets/markdown/warmups/" + data.group.toLowerCase().trim() + "/" + trimmedLabel + ".md");
+    const markdownContent = await markdownResponse.text();
+    instructionsmd.innerHTML = marked.parse(markdownContent);
     resetTimer();
     if(!checkmark.classList.contains("hidden")){
         toggleCheckmark();
@@ -450,7 +492,30 @@ async function generateExercise() {
 function getStoredInnerButtonSelections() {
     try {
         const storedSelections = JSON.parse(localStorage.getItem("inner-button-selections") || "[]");
-        return Array.isArray(storedSelections) ? storedSelections : [];
+        if (!Array.isArray(storedSelections)) {
+            return [];
+        }
+
+        return storedSelections
+            .filter((selection) => {
+                return selection && typeof selection === "object" && typeof selection.label === "string";
+            })
+            .map((selection) => {
+                return {
+                    ...selection,
+                    selected: Boolean(selection.selected),
+                    isCustomExercise: Boolean(selection.isCustomExercise),
+                };
+            });
+    } catch (error) {
+        return [];
+    }
+}
+
+function getStoredCustomExercises() {
+    try {
+        const storedExercises = JSON.parse(localStorage.getItem("custom-exercises") || "[]");
+        return Array.isArray(storedExercises) ? storedExercises : [];
     } catch (error) {
         return [];
     }

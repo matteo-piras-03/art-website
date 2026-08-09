@@ -1,0 +1,1 @@
+Draw a vehicle from reference using construction techniques. For detailed instructions, click [here](https://drawabox.com/lesson/7/1).

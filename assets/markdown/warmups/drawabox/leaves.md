@@ -1,0 +1,1 @@
+Establish a center flow line. Enclose the leaf with simple curves. Using reference images, apply complex edge details to the leaves. Optionally and finally, add details. For detailed instructions, click [here](https://drawabox.com/lesson/3/2/exerciseleaves).

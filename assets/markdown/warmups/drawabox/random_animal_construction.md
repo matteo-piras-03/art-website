@@ -1,0 +1,1 @@
+Draw a random animal from reference using construction techniques. For detailed instructions, click [here](https://drawabox.com/lesson/5/1).

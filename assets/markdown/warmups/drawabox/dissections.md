@@ -1,0 +1,1 @@
+Draw a page of Sausages with Contour Ellipses. Pick a section of the organic form. Gather texture references, and apply the textures to the chosen sections, focusing on wrapping the texture around the section and also breaking the silhouette. For detailed instructions, click [here](https://drawabox.com/lesson/2/dissections).

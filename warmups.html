@@ -16,15 +16,13 @@
             document.documentElement.setAttribute("data-theme", theme);
             document.documentElement.style.visibility = "visible";
         </script>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="assets/css/warmups.css">
 
         <script src="assets/js/navbar.js" defer></script>
         <script src="assets/js/first_time_load.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js" defer></script>
+        <script type="text/javascript" src="../assets/js/purify.js" defer></script>
         <script src="assets/js/warmups.js" defer></script>
     </head>
     <body>
@@ -88,13 +86,7 @@
                     <div id="instructions-and-goal">
                         <div id="instructions">
                             <h1>Instructions</h1>
-                            <p>
-                            </p>
-                        </div>
-                        <div id="goal">
-                            <h1>Goal</h1>
-                            <p>
-                            </p>
+                            <div id="instructions-content"></div>
                         </div>
                     </div>
                 </div>

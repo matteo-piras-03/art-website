@@ -1,26 +1,51 @@
+/* reddit-sans-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Reddit Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/reddit-sans-v6-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-sans-v42-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-sans-mono-v37-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 :root {
   --general-width: 72rem;
   --dark-mode-percentage: 100%;
 }
 
 html {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  font-size: 16px;
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0px;
   padding: 0px;
   background: var(--background-gradient);
-  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--body-background-color);
 }
 
 .hidden {
   display: none;
+}
+
+.body-noscroll {
+  overflow: hidden;
 }
 
 #main {
@@ -28,11 +53,43 @@ body {
   margin: 0 auto;
 }
 
+h1, h2, h3 {
+  font-family: "Reddit Sans", Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  font-family: "Noto Sans", sans-serif;
+}
+
+label {
+  font-family: "Noto Sans", sans-serif;
+}
+
+input[type=number] {
+  font-family: "Noto Sans Mono", sans-serif;
+}
+
+input[type=text] {
+  font-family: "Noto Sans Mono", sans-serif;
+}
+
+textarea {
+  font-family: "Noto Sans Mono", sans-serif;
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 12px;
   }
 }
+:root {
+  --modal-external-background-color: rgba(0, 0, 0, 0.7);
+}
+
 [data-theme=dark] {
   --primary-color: #f5f5f5;
   --secondary-color: #aaaaaa;
@@ -46,8 +103,10 @@ body {
   --invisible-color: rgba(255, 255, 255, 0.0);
   --menu-color: #28342a;
   --background-gradient: linear-gradient(to bottom, #1c291f, #171920);
+  --body-background-color: #171920;
   --modal-background-color: #3f504354;
   --invert-percentage: 100%;
+  --error-color-full: #ff4d4d;
 }
 
 [data-theme=light] {
@@ -63,8 +122,10 @@ body {
   --invisible-color: rgba(255, 255, 255, 0.0);
   --menu-color: #d8eedd;
   --background-gradient: linear-gradient(to bottom, #c7e7ce, #c2c8e2);
+  --body-background-color: #c2c8e2;
   --modal-background-color: #c7e7cec2;
   --invert-percentage: 0%;
+  --error-color-full: #912020;
 }
 
 .active {
@@ -99,7 +160,6 @@ body {
 #nav #nav_left {
   font-family: "Reddit Sans", sans-serif;
   font-size: 1.25rem;
-  font-weight: 900;
 }
 #nav #nav_right {
   display: flex;
@@ -173,7 +233,6 @@ body {
 #footer #footer-container h1 {
   font-family: "Reddit Sans", sans-serif;
   font-size: 2em;
-  font-weight: 900;
   margin: 0px;
 }
 #footer #footer-container p {
@@ -207,7 +266,6 @@ body {
   margin: 0 auto;
 }
 #main h1 {
-  font-family: "Reddit Sans", sans-serif;
   color: var(--primary-color);
   font-size: 2rem;
   font-optical-sizing: auto;
@@ -233,11 +291,6 @@ body {
   gap: 1rem;
 }
 #section-0 div label {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
   font-size: 1rem;
   color: var(--secondary-color);
   height: 1rem;
@@ -246,11 +299,6 @@ body {
 }
 #section-0 div button {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
   border: 1px solid;
   border-color: var(--light-border-color);
   border-radius: 0.25rem;
@@ -469,13 +517,13 @@ body {
 #modal-view {
   opacity: 0;
   display: none;
-  transition: opacity 0.5s ease, display 1s allow-discrete;
+  transition: opacity 0.25s ease, display 0.25s allow-discrete;
   position: fixed;
   top: 0px;
   left: 0px;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--modal-external-background-color);
   backdrop-filter: blur(10px);
   z-index: 2;
   margin: 0px;
@@ -486,6 +534,11 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 1;
+}
+@starting-style {
+  #modal-view.visible {
+    opacity: 0;
+  }
 }
 #modal-view #modal-view-sub {
   position: relative;

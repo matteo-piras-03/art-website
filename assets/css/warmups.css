@@ -1,26 +1,51 @@
+/* reddit-sans-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Reddit Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/reddit-sans-v6-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-sans-v42-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-sans-mono-v37-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 :root {
   --general-width: 72rem;
   --dark-mode-percentage: 100%;
 }
 
 html {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  font-size: 16px;
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0px;
   padding: 0px;
   background: var(--background-gradient);
-  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--body-background-color);
 }
 
 .hidden {
   display: none;
+}
+
+.body-noscroll {
+  overflow: hidden;
 }
 
 #main {
@@ -28,11 +53,43 @@ body {
   margin: 0 auto;
 }
 
+h1, h2, h3 {
+  font-family: "Reddit Sans", Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  font-family: "Noto Sans", sans-serif;
+}
+
+label {
+  font-family: "Noto Sans", sans-serif;
+}
+
+input[type=number] {
+  font-family: "Noto Sans Mono", sans-serif;
+}
+
+input[type=text] {
+  font-family: "Noto Sans Mono", sans-serif;
+}
+
+textarea {
+  font-family: "Noto Sans Mono", sans-serif;
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 12px;
   }
 }
+:root {
+  --modal-external-background-color: rgba(0, 0, 0, 0.7);
+}
+
 [data-theme=dark] {
   --primary-color: #f5f5f5;
   --secondary-color: #aaaaaa;
@@ -46,8 +103,10 @@ body {
   --invisible-color: rgba(255, 255, 255, 0.0);
   --menu-color: #28342a;
   --background-gradient: linear-gradient(to bottom, #1c291f, #171920);
+  --body-background-color: #171920;
   --modal-background-color: #3f504354;
   --invert-percentage: 100%;
+  --error-color-full: #ff4d4d;
 }
 
 [data-theme=light] {
@@ -63,8 +122,10 @@ body {
   --invisible-color: rgba(255, 255, 255, 0.0);
   --menu-color: #d8eedd;
   --background-gradient: linear-gradient(to bottom, #c7e7ce, #c2c8e2);
+  --body-background-color: #c2c8e2;
   --modal-background-color: #c7e7cec2;
   --invert-percentage: 0%;
+  --error-color-full: #912020;
 }
 
 .active {
@@ -99,7 +160,6 @@ body {
 #nav #nav_left {
   font-family: "Reddit Sans", sans-serif;
   font-size: 1.25rem;
-  font-weight: 900;
 }
 #nav #nav_right {
   display: flex;
@@ -154,52 +214,7 @@ body {
     margin: 0px 5px;
   }
 }
-#footer {
-  background-color: var(--background-color);
-  color: var(--primary-color);
-  height: 200px;
-  display: flex;
-  justify-content: center;
-}
-#footer #footer-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px;
-  max-width: 72rem;
-  margin: 25px 10px 5px 10px;
-}
-#footer #footer-container h1 {
-  font-family: "Reddit Sans", sans-serif;
-  font-size: 2em;
-  font-weight: 900;
-  margin: 0px;
-}
-#footer #footer-container p {
-  color: var(--secondary-color);
-  margin: 12px 0px 16px 0px;
-}
-#footer #footer-container a {
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  color: var(--primary-color);
-  margin: 10px 0px;
-}
-#footer #footer-container a:hover {
-  color: var(--accent-color);
-  transition: background-color 0.3s ease;
-  background-color: var(--a-background-color);
-}
-
-@media (max-width: 960px) {
-  #footer-container a {
-    font-size: 1.5rem;
-  }
-}
 h1 {
-  font-family: "Reddit Sans", sans-serif;
   color: var(--primary-color);
   font-size: 2rem;
   font-optical-sizing: auto;
@@ -209,7 +224,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Reddit Sans", sans-serif;
   color: var(--secondary-color);
   font-size: 1.5rem;
   font-optical-sizing: auto;
@@ -236,11 +250,6 @@ span {
 }
 #section-0 a {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
   text-decoration: none;
   text-align: center;
   border: 1px solid;
@@ -283,6 +292,49 @@ span {
 @media (max-width: 480px) {
   #section-0 {
     width: 95%;
+  }
+}
+#footer {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+#footer #footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  max-width: 72rem;
+  margin: 25px 10px 5px 10px;
+}
+#footer #footer-container h1 {
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 2em;
+  margin: 0px;
+}
+#footer #footer-container p {
+  color: var(--secondary-color);
+  margin: 12px 0px 16px 0px;
+}
+#footer #footer-container a {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin: 10px 0px;
+}
+#footer #footer-container a:hover {
+  color: var(--accent-color);
+  transition: background-color 0.3s ease;
+  background-color: var(--a-background-color);
+}
+
+@media (max-width: 960px) {
+  #footer-container a {
+    font-size: 1.5rem;
   }
 }
 [data-theme=dark] {
@@ -346,13 +398,8 @@ span {
   justify-content: center;
   align-items: center;
 }
-#section-1 #img-and-buttons #timer-block #timer-input input {
+#section-1 #img-and-buttons #timer-block #timer-input input[type=number] {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  font-family: "Noto Sans Mono", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
   border: 1px solid;
   border-color: var(--light-border-color);
   border-radius: 0.25rem;
@@ -365,18 +412,18 @@ span {
   text-align: center;
   margin: 0px 1rem;
 }
-#section-1 #img-and-buttons #timer-block #timer-input input::-webkit-outer-spin-button, #section-1 #img-and-buttons #timer-block #timer-input input::-webkit-inner-spin-button {
+#section-1 #img-and-buttons #timer-block #timer-input input[type=number]::-webkit-outer-spin-button, #section-1 #img-and-buttons #timer-block #timer-input input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-#section-1 #img-and-buttons #timer-block #timer-input input[type=number] {
+#section-1 #img-and-buttons #timer-block #timer-input input[type=number][type=number] {
   -moz-appearance: textfield;
 }
-#section-1 #img-and-buttons #timer-block #timer-input input:focus {
+#section-1 #img-and-buttons #timer-block #timer-input input[type=number]:focus {
   border-color: var(--selected-color-full);
 }
 #section-1 #img-and-buttons #timer-block #timer-input span {
-  font: "Noto Sans Mono", sans-serif;
+  font-family: "Noto Sans Mono", sans-serif;
   font-size: 1.5rem;
 }
 #section-1 #img-and-buttons #timer-block #timer-input.hidden {
@@ -385,10 +432,6 @@ span {
 #section-1 #img-and-buttons #timer-block #timer {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   font-family: "Noto Sans Mono", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
   border: 1px solid;
   border-color: var(--light-border-color);
   border-radius: 0.25rem;
@@ -421,11 +464,6 @@ span {
 }
 #section-1 #img-and-buttons button {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
   border: 1px solid;
   border-color: var(--light-border-color);
   border-radius: 0.25rem;
@@ -500,20 +538,55 @@ span {
 }
 #section-1 #instructions-and-goal {
   margin: 1rem 0px;
+  color: var(--border-color);
 }
 #section-1 #instructions-and-goal h1 {
   margin: 2rem 0px 2rem 0px;
 }
-#section-1 #instructions-and-goal p {
-  color: var(--border-color);
-  text-align: justify;
+#section-1 #instructions-and-goal h2 {
+  margin: 1rem 0px 1rem 0px;
 }
-#section-1 #instructions-and-goal p a {
+#section-1 #instructions-and-goal h3 {
+  margin: 0.5rem 0px 0.5rem 0px;
+  color: var(--secondary-color);
+}
+#section-1 #instructions-and-goal h4 {
+  margin: 0.5rem 0px 0.5rem 0px;
+  color: var(--secondary-color);
+}
+#section-1 #instructions-and-goal h5 {
+  margin: 0.5rem 0px 0.5rem 0px;
+  color: var(--secondary-color);
+}
+#section-1 #instructions-and-goal h6 {
+  margin: 0.5rem 0px 0.5rem 0px;
+  color: var(--secondary-color);
+}
+#section-1 #instructions-and-goal blockquote {
+  margin: 1rem 0px 1rem 0px;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--selected-color);
+  border-radius: 1rem;
+  background-color: var(--background-color);
+}
+#section-1 #instructions-and-goal a {
   text-decoration: none;
   color: var(--selected-color-full);
 }
-#section-1 #instructions-and-goal p a:hover {
+#section-1 #instructions-and-goal a:hover {
   text-decoration: underline;
+}
+#section-1 #instructions-and-goal p {
+  color: var(--border-color);
+  text-align: justify;
+  line-height: 1.5;
+}
+#section-1 #instructions-and-goal ul, #section-1 #instructions-and-goal ol {
+  color: var(--border-color);
+  line-height: 1.8;
+}
+#section-1 #instructions-and-goal ol {
+  list-style-type: decimal;
 }
 
 @media (max-width: 1280px) {
@@ -530,6 +603,24 @@ span {
   }
   #section-1 #img-and-buttons #timer-and-score {
     margin-left: 1rem;
+  }
+  #section-1 #instructions-and-goal #instructions-content h1 {
+    text-align: center;
+  }
+  #section-1 #instructions-and-goal #instructions-content h2 {
+    text-align: center;
+  }
+  #section-1 #instructions-and-goal #instructions-content h3 {
+    text-align: center;
+  }
+  #section-1 #instructions-and-goal #instructions-content h4 {
+    text-align: center;
+  }
+  #section-1 #instructions-and-goal #instructions-content h5 {
+    text-align: center;
+  }
+  #section-1 #instructions-and-goal #instructions-content h6 {
+    text-align: center;
   }
 }
 @media (max-width: 960px) {
@@ -583,6 +674,12 @@ span {
   #section-1 #img-and-buttons #next {
     margin-top: 1rem;
     font-size: 1.5rem;
+  }
+  #section-1 #instructions-and-goal {
+    font-size: 1.2rem;
+  }
+  #section-1 #instructions-and-goal h1 {
+    text-align: left;
   }
 }
 @media (max-width: 480px) {

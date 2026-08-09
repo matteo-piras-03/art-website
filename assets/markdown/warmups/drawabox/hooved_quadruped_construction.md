@@ -1,0 +1,1 @@
+Draw a hooved quadruped from reference using construction techniques, by identifying the major masses. For detailed instructions, click [here](https://drawabox.com/lesson/5/1).
