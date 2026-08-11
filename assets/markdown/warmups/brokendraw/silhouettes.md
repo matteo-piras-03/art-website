@@ -1,0 +1,1 @@
+Get a reference, and try to draw its silhouette, by identifying the shapes. You can also try drawing the shadow silhouettes.

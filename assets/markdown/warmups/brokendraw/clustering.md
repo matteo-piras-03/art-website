@@ -1,0 +1,1 @@
+Very similar to the box stacking exercise. Draw a horizon line (or not), and draw boxes and cylinders stacking on top of each other, belonging on the same scene. You can also increase the complexity gradually, by adding tilted boxes and cylinders.

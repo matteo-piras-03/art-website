@@ -1,0 +1,1 @@
+Draw a horizon line (or not), and draw boxes stacking on top of each other, belonging on the same scene. You can also increase the complexity gradually, by adding tilted boxes.

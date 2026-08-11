@@ -1,0 +1,100 @@
+{
+    "handle": "dabl5",
+    "date": "2026-08-10",
+    "title": "Drawabox Lesson 5",
+    "thumbnail-id": "10",
+    "tags": ["Drawabox"],
+    "mediums": ["Felt tip Pen", "Brush Pen"],
+    "drawings": [
+        {
+            "id": "01",
+            "title": "Organic Intersections 1",
+            "date": "2026-06-11",
+            "caption": "First page of the Organic Intersections exercise."
+        },
+        {
+            "id": "02",
+            "title": "Organic Intersections 2",
+            "date": "2026-06-15",
+            "caption": "Second page of the Organic Intersections exercise."
+        },
+        {
+            "id": "03",
+            "title": "Bird Construction 1",
+            "date": "2026-07-06",
+            "caption": "First page of untextured bird construction: Canada Goose and Horned Puffin."
+        },
+        {
+            "id": "04",
+            "title": "Bird Construction 2",
+            "date": "2026-07-08",
+            "caption": "Second page of textured bird construction: Baby Jackdaw and Toco Toucan."
+        },
+        {
+            "id": "05",
+            "title": "Non-hooved animal construction 1",
+            "date": "2026-07-13",
+            "caption": "First page of non-hooved animal construction: Red Fox."
+        },
+        {
+            "id": "06",
+            "title": "Non-hooved animal construction 2",
+            "date": "2026-07-16",
+            "caption": "Second page of non-hooved animal construction: Red Fox."
+        },
+        {
+            "id": "07",
+            "title": "Non-hooved animal construction 3",
+            "date": "2026-07-20",
+            "caption": "Third page of non-hooved animal construction: Cheetah."
+        },
+        {
+            "id": "08",
+            "title": "Non-hooved animal construction 4",
+            "date": "2026-07-24",
+            "caption": "Fourth page of non-hooved animal construction: Cheetah."
+        },
+        {
+            "id": "09",
+            "title": "Hooved animal construction 1",
+            "date": "2026-07-28",
+            "caption": "First page of hooved animal construction: Fallow Deer."
+        },
+        {
+            "id": "10",
+            "title": "Hooved animal construction 2",
+            "date": "2026-07-30",
+            "caption": "Second page of hooved animal construction: Fallow Deer."
+        },
+        {
+            "id": "11",
+            "title": "Hooved animal construction 3",
+            "date": "2026-07-31",
+            "caption": "Third page of hooved animal construction: Rhinoceros."
+        },
+        {
+            "id": "12",
+            "title": "Hooved animal construction 4",
+            "date": "2026-08-01",
+            "caption": "Fourth page of hooved animal construction: Rhinoceros."
+        },
+        {
+            "id": "13",
+            "title": "Random animal construction 1",
+            "date": "2026-08-02",
+            "caption": "First page of random animal construction: Hammerhead Shark."
+        },
+        {
+            "id": "14",
+            "title": "Random animal construction 2",
+            "date": "2026-08-06",
+            "caption": "Second page of random animal construction: Jackson's Chameleon."
+        },
+        {
+            "id": "15",
+            "title": "Hybrid animal construction",
+            "date": "2026-08-10",
+            "caption": "First page of hybrid animal construction: A combination of a fox + deer head, bird forward legs and rhinoceros backward legs, with a cheetah tail and body."
+        }
+    ]
+}
