@@ -1,6 +1,6 @@
 {
     "handle": "dabcelebration",
-    "date": "2026-06-18",
+    "date": "2026-08-17",
     "title": "Drawabox Celebrational Drawings",
     "thumbnail-id": "01",
     "tags": ["Drawabox"],
@@ -23,6 +23,12 @@
             "title": "Greenhouse",
             "date": "2026-06-02",
             "caption": "Celebration of the completion of Lesson 3."
+        },
+        {
+            "id": "04",
+            "title": "Fearless",
+            "date": "2026-08-17",
+            "caption": "Celebration of the completion of Lesson 4."
         }
     ]
 }
