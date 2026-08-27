@@ -16,10 +16,10 @@ async function initializeFirstTimeInnerButtons() {
         const exercises = Array.isArray(data?.exercises) ? data.exercises : [];
 
         const initialRecords = exercises
-            .filter((exercise) => exercise && typeof exercise.index !== "undefined")
+            .filter((exercise) => exercise && typeof exercise.label === "string" && exercise.label.trim() !== "")
             .map((exercise) => {
                 return {
-                    key: `inner-button-${exercise.index}`,
+                    key: typeof exercise.label === "string" ? exercise.label.trim() : "",
                     label: typeof exercise.label === "string" ? exercise.label : "",
                     range: "1",
                     selected: true,

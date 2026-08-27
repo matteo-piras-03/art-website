@@ -214,6 +214,18 @@ textarea {
     margin: 0px 5px;
   }
 }
+[data-theme=dark] {
+  --start-color: rgba(50, 175, 98, 0.2);
+  --pause-color: rgba(175, 173, 50, 0.2);
+  --reset-color: rgba(175, 50, 50, 0.2);
+}
+
+[data-theme=light] {
+  --start-color: rgba(50, 175, 98, 0.2);
+  --pause-color: rgba(175, 173, 50, 0.2);
+  --reset-color: rgba(175, 50, 50, 0.2);
+}
+
 h1 {
   color: var(--primary-color);
   font-size: 2rem;
@@ -524,6 +536,7 @@ span {
   box-sizing: border-box;
   border-color: var(--light-border-color);
   border-radius: 0.25rem;
+  font-size: 1rem;
   padding: 1rem;
   color: var(--primary-color);
   background-color: var(--invisible-color);
@@ -566,6 +579,37 @@ span {
 #section-2 ul li textarea:focus[readonly] {
   border-color: var(--light-border-color);
   background-color: var(--invisible-color);
+}
+
+#section-3 {
+  margin: 2rem 0px;
+}
+#section-3 p {
+  color: var(--secondary-color);
+  text-align: justify;
+}
+#section-3 button {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  display: block;
+  height: 3rem;
+  border: 1px solid;
+  box-sizing: border-box;
+  border-color: var(--light-border-color);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: var(--primary-color);
+  background-color: var(--reset-color);
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+#section-3 button:hover {
+  color: var(--accent-color);
+  border-color: var(--selected-color-full);
+}
+#section-3 button {
+  margin-bottom: 2rem;
 }
 
 #modal-view {
@@ -694,6 +738,10 @@ span {
     width: 90%;
     margin: 0px auto;
   }
+  #section-3 {
+    width: 90%;
+    margin: 0px auto;
+  }
   #modal-view #modal-view-sub {
     width: 80%;
   }
@@ -718,6 +766,13 @@ span {
     font-size: 1.2rem;
   }
   #section-2 ul li textarea {
+    font-size: 1.2rem;
+  }
+  #section-3 p {
+    font-size: 1.2rem;
+  }
+  #section-3 button {
+    height: 4rem;
     font-size: 1.2rem;
   }
   #modal-view #modal-view-sub {
@@ -753,6 +808,9 @@ span {
     height: 1.5rem;
   }
   #section-2 {
+    width: 95%;
+  }
+  #section-3 {
     width: 95%;
   }
   #modal-view #modal-view-sub {

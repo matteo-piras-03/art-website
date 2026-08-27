@@ -23,6 +23,11 @@
 
         <title>Warmup settings - pirAs03</title>
 
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+        <link rel="manifest" href="../assets/icons/site.webmanifest">
+
         <style>
             html {
                 visibility: hidden;
@@ -324,7 +329,6 @@
                                 </li>
                             </ul>
                         </ul>
-                        <!--
                         <li>
                         <button class="outer-button">
                             <div><span>brokendraw</span></div>
@@ -365,12 +369,14 @@
                                         <input type="range" name="score" min="1" max="5" value="1">
                                     </button>
                                 </li>
+                                <!--
                                 <li  class="inner-li">
                                     <button class="inner-button">
                                         <div><div class="indicator"></div><span>Silhouettes</span></div>
                                         <input type="range" name="score" min="1" max="5" value="1">
                                     </button>
                                 </li>
+                                -->
                             </ul>
                             <li>
                             <button class="middle-button">
@@ -387,30 +393,13 @@
                                 </li>
                                 <li  class="inner-li">
                                     <button class="inner-button">
-                                        <div><div class="indicator"></div><span>Projection</span></div>
-                                        <input type="range" name="score" min="1" max="5" value="1">
-                                    </button>
-                                </li>
-                                <li  class="inner-li">
-                                    <button class="inner-button">
-                                        <div><div class="indicator"></div><span>Rotating Cylinders</span></div>
-                                        <input type="range" name="score" min="1" max="5" value="1">
-                                    </button>
-                                </li>
-                                <li  class="inner-li">
-                                    <button class="inner-button">
-                                        <div><div class="indicator"></div><span>Box Compositions</span></div>
-                                        <input type="range" name="score" min="1" max="5" value="1">
-                                    </button>
-                                </li>
-                                <li  class="inner-li">
-                                    <button class="inner-button">
                                         <div><div class="indicator"></div><span>Rotation</span></div>
                                         <input type="range" name="score" min="1" max="5" value="1">
                                     </button>
                                 </li>
                             </ul>
                             <li>
+                            <!--
                             <button class="middle-button">
                                 <div><div class="indicator"></div><span>Level 4: Form Manipulation</span></div>
                                 <img src="../assets/svg/chevron-down-svgrepo-com.svg">
@@ -442,6 +431,8 @@
                                     </button>
                                 </li>
                             </ul>
+                            -->
+                            <!--
                             <li>
                             <button class="middle-button">
                                 <div><div class="indicator"></div><span>Level 5: Form Interpretation</span></div>
@@ -483,19 +474,7 @@
                                 </li>
                                 <li  class="inner-li">
                                     <button class="inner-button">
-                                        <div><div class="indicator"></div><span>Organic Textures</span></div>
-                                        <input type="range" name="score" min="1" max="5" value="1">
-                                    </button>
-                                </li>
-                                <li  class="inner-li">
-                                    <button class="inner-button">
                                         <div><div class="indicator"></div><span>Stickers</span></div>
-                                        <input type="range" name="score" min="1" max="5" value="1">
-                                    </button>
-                                </li>
-                                <li  class="inner-li">
-                                    <button class="inner-button">
-                                        <div><div class="indicator"></div><span>Texture cube</span></div>
                                         <input type="range" name="score" min="1" max="5" value="1">
                                     </button>
                                 </li>
@@ -542,7 +521,7 @@
                             </ul>
                             <li>
                         </ul>
-                        -->
+                    -->
                     </div>
                     <li id="custom-exercises-li">
                         <button class="outer-button">
@@ -585,6 +564,13 @@
                         </form>
                     </li>
                 </ul>
+            </div>
+            <div id="section-3">
+                <h1>Reset data</h1>
+                <p>
+                    You can reset your data to the default values. This will remove all of your custom exercises and restore the default settings (all lesson 1 and 2 exercises, plus boxes and cylinders get selected).
+                </p>
+                <button id="reset-button">Reset data</button>
             </div>
         </article>
         <div id="modal-view" class="">

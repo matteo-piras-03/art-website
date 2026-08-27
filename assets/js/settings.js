@@ -13,6 +13,7 @@ function setupAll(){
     setupNewExerciseButton();
     setupModalView();
     setupExportImportButtons();
+    setupResetButton();
 }
 
 function getButtonIndicator(button) {
@@ -28,9 +29,7 @@ function getButtonIndicator(button) {
 }
 
 function getInnerButtonStorageKey(button) {
-    const buttons = Array.from(document.querySelectorAll(".inner-button"));
-    const index = buttons.indexOf(button);
-    return `inner-button-${index}`;
+    return getInnerButtonLabel(button);
 }
 
 function getInnerButtonLabel(button) {
@@ -58,6 +57,10 @@ function isNewExerciseButton(button) {
     return button && button.id === "new-exercise-button";
 }
 
+function normalizeInnerButtonKey(key, label) {
+    return /^inner-button-\d+$/.test(key) && label.trim() !== "" ? label.trim() : key;
+}
+
 function getStoredInnerButtonRecords() {
     try {
         const storedRecords = JSON.parse(localStorage.getItem("inner-button-selections") || "[]");
@@ -66,17 +69,27 @@ function getStoredInnerButtonRecords() {
             return [];
         }
 
-        return storedRecords.filter((record) => {
+        let keysMigrated = false;
+        const normalizedRecords = storedRecords.filter((record) => {
             return record && typeof record === "object" && typeof record.key === "string";
         }).map((record) => {
+            const label = typeof record.label === "string" ? record.label : "";
+            const key = normalizeInnerButtonKey(record.key, label);
+            keysMigrated = keysMigrated || key !== record.key;
             return {
-                key: record.key,
-                label: typeof record.label === "string" ? record.label : "",
+                key,
+                label,
                 range: record.range !== undefined ? String(record.range) : "",
                 selected: Boolean(record.selected),
                 isCustomExercise: Boolean(record.isCustomExercise),
             };
         });
+
+        if (keysMigrated) {
+            localStorage.setItem("inner-button-selections", JSON.stringify(normalizedRecords));
+        }
+
+        return normalizedRecords;
     } catch (error) {
         return [];
     }
@@ -260,7 +273,7 @@ function setupExportImportButtons() {
 
 function buildExportPayload() {
     return {
-        version: 1,
+        version: 2,
         innerButtonSelections: getStoredInnerButtonRecords(),
         customExercises: getStoredCustomExercises(),
     };
@@ -320,7 +333,7 @@ function normalizeImportedInnerButtonRecord(record) {
     }
 
     return {
-        key: record.key,
+        key: normalizeInnerButtonKey(record.key, record.label),
         label: record.label,
         range: normalizedRange,
         selected: record.selected,
@@ -363,6 +376,15 @@ function validateImportPayload(importPayload) {
         return null;
     }
     
+    //Version 2 conversion
+    if (importPayload.version === 1) {
+        console.log("Converting imported data from version 1 to version 2 format.");
+        importPayload.innerButtonSelections.forEach((record) => {
+            if (record && typeof record.label === "string" && record.label.trim() !== "") {
+                record.key = record.label.trim();
+            }
+        });
+    }
 
     const importedSelections = Array.isArray(importPayload.innerButtonSelections)
         ? importPayload.innerButtonSelections.map(normalizeImportedInnerButtonRecord)
@@ -767,8 +789,6 @@ function onModalClick(event){
     modalView.classList.remove("visible");
 }
 
-
-
 var validExerciseName = false;
 
 function onNewExerciseButtonClick(event){
@@ -777,8 +797,6 @@ function onNewExerciseButtonClick(event){
     document.body.classList.add('body-noscroll');
     modalView.classList.add("visible");
 }
-
-
 
 function setupNewExerciseForm(){
     const modalViewForm = document.forms["new-exercise-form"];
@@ -834,3 +852,62 @@ function validateSubmitButtonState(){
     }
 }
 
+// Reset data button functionality
+const resetButton = document.querySelector("#reset-button");
+
+function setupResetButton() {
+    if (resetButton) {
+        resetButton.addEventListener("click", onResetButtonClick);
+    }
+}
+
+async function onResetButtonClick(event) {
+    event.preventDefault();
+    const confirmation = confirm("Are you sure you want to reset all data to default values? This will remove all of your custom exercises and restore the default settings (all lesson 1 and 2 exercises, plus boxes and cylinders get selected).");
+    if (confirmation) {
+    const storageKey = "inner-button-selections";
+        try {
+            const response = await fetch("/assets/json/warmups_default.json");
+
+            if (!response.ok) {
+                return;
+            }
+
+            const data = await response.json();
+            const exercises = Array.isArray(data?.exercises) ? data.exercises : [];
+
+            const initialRecords = exercises
+                .filter((exercise) => exercise && typeof exercise.label === "string" && exercise.label.trim() !== "")
+                .map((exercise) => {
+                    return {
+                        key: typeof exercise.label === "string" ? exercise.label.trim() : "",
+                        label: typeof exercise.label === "string" ? exercise.label : "",
+                        range: "1",
+                        selected: true,
+                    };
+                });
+
+            if (initialRecords.length > 0) {
+                localStorage.removeItem("custom-exercises");
+                localStorage.removeItem("inner-button-selections");
+                restoreCustomExercises();
+                localStorage.setItem(storageKey, JSON.stringify(initialRecords));
+                restoreInnerButtonSelections();
+                restoreInnerButtonRanges();
+                syncMiddleButtonSelections();
+                resetInnerButtonRanges();
+            }
+        } catch (error) {
+            return;
+        }
+    }
+}
+
+function resetInnerButtonRanges(){
+    document.querySelectorAll(".inner-button").forEach((button) => {
+        const rangeInput = getInnerButtonRange(button);
+        if (rangeInput) {
+            rangeInput.value = "1";
+        }
+    });
+}
