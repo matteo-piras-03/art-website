@@ -8,6 +8,7 @@ const skipButton = document.getElementById("skip");
 const nextButton = document.getElementById("next");
 const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
+const soundButton = document.getElementById("sound");
 const scoreButtons = document.getElementById("score-buttons");
 const checkmark = document.getElementById("checkmark")
 const badButton = document.getElementById("bad");
@@ -46,36 +47,12 @@ function formatTime(totalSeconds) {
 }
 
 function playTimerElapsedSound() {
-    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-
-    if (!AudioContextClass) {
+    if (!soundButton || soundButton.classList.contains("muted")) {
         return;
     }
-
-    if (!timerAudioContext) {
-        timerAudioContext = new AudioContextClass();
-    }
-
-    if (timerAudioContext.state === "suspended") {
-        timerAudioContext.resume();
-    }
-
-    const oscillator = timerAudioContext.createOscillator();
-    const gainNode = timerAudioContext.createGain();
-
-    oscillator.type = "sine";
-    oscillator.frequency.setValueAtTime(880, timerAudioContext.currentTime);
-    oscillator.frequency.exponentialRampToValueAtTime(440, timerAudioContext.currentTime + 0.35);
-
-    gainNode.gain.setValueAtTime(0.0001, timerAudioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.2, timerAudioContext.currentTime + 0.02);
-    gainNode.gain.exponentialRampToValueAtTime(0.0001, timerAudioContext.currentTime + 0.45);
-
-    oscillator.connect(gainNode);
-    gainNode.connect(timerAudioContext.destination);
-
-    oscillator.start();
-    oscillator.stop(timerAudioContext.currentTime + 0.5);
+    const audio = new Audio("assets/sounds/timer_elapsed.mp3");
+    audio.volume = 0.5;
+    audio.play();
 }
 
 function getInitialSeconds() {
@@ -126,9 +103,11 @@ function updateTimerButton() {
     if (timerState === "running") {
         startButton.id = "pause";
         startButton.textContent = "Pause";
+        soundButton.classList.add("hidden");
     } else {
         startButton.id = "start";
         startButton.textContent = "Start";
+        soundButton.classList.remove("hidden");
     }
 }
 
@@ -197,6 +176,21 @@ function resetTimer() {
     updateTimerVisibility();
 }
 
+function toggleSound() {
+    if (!soundButton) {
+        return;
+    }
+    if (soundButton.classList.contains("muted")) {
+        soundButton.classList.remove("muted");
+        soundButton.innerHTML = '<img src="assets/svg/volume-max-svgrepo-com.svg" alt="Sound">';
+        localStorage.setItem("sound-muted", "false");
+    } else {
+        soundButton.classList.add("muted");
+        soundButton.innerHTML = '<img src="assets/svg/volume-xmark-svgrepo-com.svg" alt="Muted">';
+        localStorage.setItem("sound-muted", "true");
+    }
+}
+
 function setupTimerInput(input, maxValue, nextInput) {
     if (!input) {
         return;
@@ -238,6 +232,15 @@ if (startButton) {
 
 if (resetButton) {
     resetButton.addEventListener("click", resetTimer);
+}
+
+if (soundButton) {
+    const isMuted = localStorage.getItem("sound-muted") === "true";
+    if (isMuted) {
+        soundButton.classList.add("muted");
+        soundButton.innerHTML = '<img src="assets/svg/volume-xmark-svgrepo-com.svg" alt="Muted">';
+    }
+    soundButton.addEventListener("click", toggleSound);
 }
 
 function initializeWarmupsPage() {

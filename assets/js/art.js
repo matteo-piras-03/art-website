@@ -86,6 +86,7 @@ function setupMenuToggles(){
                 menu.querySelectorAll('button.selected').forEach(item => item.classList.remove('selected'));
                 renderMenuButton(menu, menuButton);
                 applyFilters();
+                sortCards();
                 return;
             }
 
