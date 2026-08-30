@@ -184,6 +184,7 @@ function toggleSound() {
         soundButton.classList.remove("muted");
         soundButton.innerHTML = '<img src="assets/svg/volume-max-svgrepo-com.svg" alt="Sound">';
         localStorage.setItem("sound-muted", "false");
+        playTimerElapsedSound();
     } else {
         soundButton.classList.add("muted");
         soundButton.innerHTML = '<img src="assets/svg/volume-xmark-svgrepo-com.svg" alt="Muted">';

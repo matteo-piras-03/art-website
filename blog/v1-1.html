@@ -40,50 +40,59 @@
         <script src="../assets/js/navbar.js" defer></script>
     </head>
     <body>
-        <nav id="nav">
-            <div id="nav-container">
-                <div id="nav_left">
-                    <a href="../index.html">pirAs03</a>
+        <div class="page">
+            <nav id="nav">
+                <div id="nav-container">
+                    <div id="nav_left">
+                        <a href="../index.html">pirAs03</a>
+                    </div>
+                    <div id="nav_right">
+                        <a href="../art.html">Art</a>
+                        <a href="../blog.html" class="active">Blog</a>
+                        <a href="../warmups.html">Warmups</a>
+                        <button id="toggledarkmode"><img id="dark" src="../assets/svg/moon-stars-svgrepo-com.svg"><img id="light" src="../assets/svg/sun-svgrepo-com.svg" class="hidden"></button>
+                    </div>
                 </div>
-                <div id="nav_right">
-                    <a href="../art.html">Art</a>
-                    <a href="../blog.html" class="active">Blog</a>
-                    <a href="../warmups.html">Warmups</a>
-                    <button id="toggledarkmode"><img id="dark" src="../assets/svg/moon-stars-svgrepo-com.svg"><img id="light" src="../assets/svg/sun-svgrepo-com.svg" class="hidden"></button>
+            </nav>
+            <article id="main">
+                <div id="section-0">
+                    <a href="../blog.html" id="back-button"><img src="../assets/svg/chevron-left-svgrepo-com.svg" alt="Back"> <span>Back to Blog</span></a>
+                    <h1 class="title">v1.1</h1>
+                    <h2 class="date">Aug 6, 2026</h2>
+                    <span class="description">Art gallery update.</span>
                 </div>
-            </div>
-        </nav>
-        <article id="main">
-            <div id="section-0">
-                <a href="../blog.html" id="back-button">Back to Blog</a>
-                <h1 class="title">v1.1</h1>
-                <h2 class="date">Aug 6, 2026</h2>
-                <span class="description">Art gallery update.</span>
-            </div>
-            <div id="section-1">
-                <p>
-                    Hello folks! I worked hard for this update, mostly because I was trying to do some things that I haven't done before.
-                    If you know about the "So you want the be a pilot" kind of thing, that's what I'm refering to.
-                </p>
-                <h1>Changelog</h1>
-                <ul>
-                    <li>Added the <a href="../art.html">Art Gallery</a>, where drawings are organized in albums that have a date of the most recent drawing, tags and mediums</li>
-                    <li>Added a simple sort menu for dates, and a filter system for mediums and tags in the Art Gallery</li>
-                    <li>Drawings are loaded via Javascript and JSON files containing all information required</li>
-                    <li>Stored the images in an R2 cloudflare bucket</li>
-                    <li>More media queries for a better mobile experience</li>
-                    <li>Fixed a bug in the modal view on mobile</li>
-                </ul>
-                <h1>Feedback</h1>
-                <p>
-                    If you manage to find bugs or if you want to give feedback feel free to dm piras03 on <a href="https://discord.com">Discord</a>.
-                </p>
-                <h1>Next steps</h1>
-                <ul>
-                    <li><s>Add svgs for the menu and light/dark mode button</s></li>
-                    <li>Add a warmup generator with a timer</li>
-                </ul>
-            </div>
-        </article>
+                <div id="section-1">
+                    <p>
+                        Hello folks! I worked hard for this update, mostly because I was trying to do some things that I haven't done before.
+                        If you know about the "So you want the be a pilot" kind of thing, that's what I'm refering to.
+                    </p>
+                    <h1>Changelog</h1>
+                    <ul>
+                        <li>Added the <a href="../art.html">Art Gallery</a>, where drawings are organized in albums that have a date of the most recent drawing, tags and mediums</li>
+                        <li>Added a simple sort menu for dates, and a filter system for mediums and tags in the Art Gallery</li>
+                        <li>Drawings are loaded via Javascript and JSON files containing all information required</li>
+                        <li>Stored the images in an R2 cloudflare bucket</li>
+                        <li>More media queries for a better mobile experience</li>
+                        <li>Fixed a bug in the modal view on mobile</li>
+                    </ul>
+                    <h1>Feedback</h1>
+                    <p>
+                        If you manage to find bugs or if you want to give feedback feel free to dm piras03 on <a href="https://discord.com">Discord</a>.
+                    </p>
+                    <h1>Next steps</h1>
+                    <ul>
+                        <li><s>Add svgs for the menu and light/dark mode button</s></li>
+                        <li>Add a warmup generator with a timer</li>
+                    </ul>
+                </div>
+            </article>
+            <footer id="footer">
+                <div id="footer-container">
+                    <h1>Matteo Piras | pirAs03</h1>
+                    <p>© 2025-2026 All rights reserved.</p>
+                    <a href="#top">Back to top</a>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

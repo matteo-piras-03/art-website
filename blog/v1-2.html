@@ -40,59 +40,68 @@
         <script src="../assets/js/navbar.js" defer></script>
     </head>
     <body>
-        <nav id="nav">
-            <div id="nav-container">
-                <div id="nav_left">
-                    <a href="../index.html">pirAs03</a>
+        <div class="page">
+            <nav id="nav">
+                <div id="nav-container">
+                    <div id="nav_left">
+                        <a href="../index.html">pirAs03</a>
+                    </div>
+                    <div id="nav_right">
+                        <a href="../art.html">Art</a>
+                        <a href="../blog.html" class="active">Blog</a>
+                        <a href="../warmups.html">Warmups</a>
+                        <button id="toggledarkmode"><img id="dark" src="../assets/svg/moon-stars-svgrepo-com.svg"><img id="light" src="../assets/svg/sun-svgrepo-com.svg" class="hidden"></button>
+                    </div>
                 </div>
-                <div id="nav_right">
-                    <a href="../art.html">Art</a>
-                    <a href="../blog.html" class="active">Blog</a>
-                    <a href="../warmups.html">Warmups</a>
-                    <button id="toggledarkmode"><img id="dark" src="../assets/svg/moon-stars-svgrepo-com.svg"><img id="light" src="../assets/svg/sun-svgrepo-com.svg" class="hidden"></button>
+            </nav>
+            <article id="main">
+                <div id="section-0">
+                    <a href="../blog.html" id="back-button"><img src="../assets/svg/chevron-left-svgrepo-com.svg" alt="Back"> <span>Back to Blog</span></a>
+                    <h1 class="title">v1.2</h1>
+                    <h2 class="date">Aug 8, 2026</h2>
+                    <span class="description">Warmup generator update.</span>
                 </div>
-            </div>
-        </nav>
-        <article id="main">
-            <div id="section-0">
-                <a href="../blog.html" id="back-button">Back to Blog</a>
-                <h1 class="title">v1.2</h1>
-                <h2 class="date">Aug 8, 2026</h2>
-                <span class="description">Warmup generator update.</span>
-            </div>
-            <div id="section-1">
-                <p>
-                    Hello folks! Another update has been released, and this time there was so much hard stuff to implement. But I really wanted to do this, so here's what I added.
-                </p>
-                <h1>Changelog</h1>
-                <p>Added the <a href="../warmups.html">Warmup Generator</a>, where users are able to randomly select warmup exercises for drawing. All data gets stored in the local browser's storage.</p>
-                <ul>
-                    <li>The top section has two buttons: one leads to the generator page, the other to the exercise page</li>
-                    <li>The warmup page allows the user to generate a random warmup chosen from the exercises activated in the exercise page</li>
-                    <li>When loaded for the first time, users will have activated all of the Lesson 1 & 2 exercises, plus the Boxes and Cylinders from Drawabox, with the lowest score set</li>
-                    <li>Lower scored exercises have a higher chance of appearing than higher scored exercises</li>
-                    <li>The page includes a programmable timer and a skip button to change exercise. When the timer elapses the user is prompted with a score choice, which can change the exercise's score.</li>
-                    <li>The exercises page allows the user to modify the exercise pool and the score of the exercise</li>
-                </ul>
-                <p>
-                    Other additions:
-                </p>
-                <ul>
-                    <li>Cleanup of the CSS files</li>
-                    <li>Changed the blog main font color to a higher contrast color</li>
-                </ul>
-                <h1>Feedback</h1>
-                <p>
-                    If you manage to find bugs or if you want to give feedback feel free to dm piras03 on <a href="https://discord.com">Discord</a>.
-                </p>
-                <h1>Next steps</h1>
-                <ul>
-                    <li>Include brokendraw's exercises</li>
-                    <li>Cleaning up the exercises thumbnails, possibly by exercises made from me (up to Lesson 5)</li>
-                    <li>Being able to add customizable exercises</li>
-                    <li>Being able to import/export data</li>
-                </ul>
-            </div>
-        </article>
+                <div id="section-1">
+                    <p>
+                        Hello folks! Another update has been released, and this time there was so much hard stuff to implement. But I really wanted to do this, so here's what I added.
+                    </p>
+                    <h1>Changelog</h1>
+                    <p>Added the <a href="../warmups.html">Warmup Generator</a>, where users are able to randomly select warmup exercises for drawing. All data gets stored in the local browser's storage.</p>
+                    <ul>
+                        <li>The top section has two buttons: one leads to the generator page, the other to the exercise page</li>
+                        <li>The warmup page allows the user to generate a random warmup chosen from the exercises activated in the exercise page</li>
+                        <li>When loaded for the first time, users will have activated all of the Lesson 1 & 2 exercises, plus the Boxes and Cylinders from Drawabox, with the lowest score set</li>
+                        <li>Lower scored exercises have a higher chance of appearing than higher scored exercises</li>
+                        <li>The page includes a programmable timer and a skip button to change exercise. When the timer elapses the user is prompted with a score choice, which can change the exercise's score.</li>
+                        <li>The exercises page allows the user to modify the exercise pool and the score of the exercise</li>
+                    </ul>
+                    <p>
+                        Other additions:
+                    </p>
+                    <ul>
+                        <li>Cleanup of the CSS files</li>
+                        <li>Changed the blog main font color to a higher contrast color</li>
+                    </ul>
+                    <h1>Feedback</h1>
+                    <p>
+                        If you manage to find bugs or if you want to give feedback feel free to dm piras03 on <a href="https://discord.com">Discord</a>.
+                    </p>
+                    <h1>Next steps</h1>
+                    <ul>
+                        <li>Include brokendraw's exercises</li>
+                        <li>Cleaning up the exercises thumbnails, possibly by exercises made from me (up to Lesson 5)</li>
+                        <li>Being able to add customizable exercises</li>
+                        <li>Being able to import/export data</li>
+                    </ul>
+                </div>
+            </article>
+            <footer id="footer">
+                <div id="footer-container">
+                    <h1>Matteo Piras | pirAs03</h1>
+                    <p>© 2025-2026 All rights reserved.</p>
+                    <a href="#top">Back to top</a>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

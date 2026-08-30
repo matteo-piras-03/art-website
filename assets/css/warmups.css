@@ -40,6 +40,16 @@ body {
   background-color: var(--body-background-color);
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  flex: 1;
+}
+
 .hidden {
   display: none;
 }
@@ -50,6 +60,7 @@ body {
 
 #main {
   max-width: 72rem;
+  width: min(72rem, 100%);
   margin: 0 auto;
 }
 
@@ -312,6 +323,7 @@ span {
   height: 200px;
   display: flex;
   justify-content: center;
+  bottom: 0px;
 }
 #footer #footer-container {
   display: flex;
@@ -350,7 +362,7 @@ span {
   }
 }
 #section-1 {
-  margin: 2rem 0px 4rem 0px;
+  margin: 2rem 0px 40px 0px;
 }
 #section-1 h1 {
   margin: 30px 0px 30px 10px;
@@ -542,10 +554,18 @@ span {
   font-size: 1.5rem;
   background-color: var(--reset-color);
 }
+#section-1 #img-and-buttons #skip h1 {
+  margin: 0px;
+  font-size: 1.25rem;
+}
 #section-1 #img-and-buttons #next {
   margin-top: 2rem;
   font-size: 1.5rem;
   background-color: var(--start-color);
+}
+#section-1 #img-and-buttons #next h1 {
+  margin: 0px;
+  font-size: 1.25rem;
 }
 #section-1 #img-and-buttons.hidden {
   display: none;
@@ -639,7 +659,7 @@ span {
 }
 @media (max-width: 960px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   h2 {
     font-size: 1.8rem;
@@ -693,15 +713,21 @@ span {
     margin-top: 1rem;
     font-size: 1.5rem;
   }
+  #section-1 #img-and-buttons #skip h1 {
+    font-size: 1.5rem;
+  }
   #section-1 #img-and-buttons #next {
     margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  #section-1 #img-and-buttons #next h1 {
     font-size: 1.5rem;
   }
   #section-1 #instructions-and-goal {
     font-size: 1.2rem;
   }
   #section-1 #instructions-and-goal h1 {
-    text-align: left;
+    text-align: center;
   }
 }
 @media (max-width: 480px) {

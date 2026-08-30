@@ -40,6 +40,16 @@ body {
   background-color: var(--body-background-color);
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  flex: 1;
+}
+
 .hidden {
   display: none;
 }
@@ -50,6 +60,7 @@ body {
 
 #main {
   max-width: 72rem;
+  width: min(72rem, 100%);
   margin: 0 auto;
 }
 
@@ -220,6 +231,7 @@ textarea {
   height: 200px;
   display: flex;
   justify-content: center;
+  bottom: 0px;
 }
 #footer #footer-container {
   display: flex;
@@ -261,10 +273,6 @@ textarea {
   overflow: hidden;
 }
 
-#main {
-  max-width: 72rem;
-  margin: 0 auto;
-}
 #main h1 {
   color: var(--primary-color);
   font-size: 2rem;
@@ -283,18 +291,20 @@ textarea {
   margin: 20px auto;
 }
 #section-0 div {
+  position: relative;
   padding: 0.5rem;
   width: 16rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
+  align-items: center;
+  box-sizing: border-box;
 }
 #section-0 div label {
   font-size: 1rem;
   color: var(--secondary-color);
-  height: 1rem;
-  margin: auto 0px;
+  margin: 0px 0px;
   pointer-events: none;
 }
 #section-0 div button {
@@ -330,7 +340,8 @@ textarea {
 #section-0 div .menu {
   position: absolute;
   display: none;
-  transform: translate(-0.15rem, 3rem);
+  top: 100%;
+  left: 0px;
   padding: 0px;
   border: 1px solid;
   border-color: var(--light-border-color);
@@ -545,9 +556,8 @@ textarea {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  width: min(60%, 72rem);
-  height: auto;
-  max-height: 90vh;
+  width: min(90%, 72rem);
+  max-height: 95vh;
   overflow-y: auto;
   padding: 1rem;
   border-radius: 1rem;
@@ -585,22 +595,21 @@ textarea {
 }
 #modal-view #modal-view-sub .img-carousel {
   position: relative;
-  height: 32rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-height: min(48rem, 80vh);
+  flex-shrink: 1;
   background-color: var(--modal-background-color);
   margin: 1rem 0px;
   border-radius: 1rem;
-  overflow: hidden;
 }
 #modal-view #modal-view-sub .img-carousel img {
+  margin: 0px auto;
   display: block;
   max-width: 100%;
-  max-height: 32rem;
+  max-height: inherit;
   padding: 0px;
   object-fit: contain;
   object-position: center;
+  border-radius: inherit;
 }
 #modal-view #modal-view-sub .img-carousel button {
   transition: background-color 0.3s ease;
@@ -620,12 +629,12 @@ textarea {
 }
 #modal-view #modal-view-sub .img-carousel button.left {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 1rem);
   left: 1rem;
 }
 #modal-view #modal-view-sub .img-carousel button.right {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 1rem);
   right: 1rem;
 }
 #modal-view #modal-view-sub .drawing-info p {
@@ -633,20 +642,29 @@ textarea {
   margin: 0px;
 }
 
-@media (min-width: 1921px) {
+@media (min-height: 1439px) {
   #modal-view #modal-view-sub .img-carousel {
-    height: 40rem;
-  }
-  #modal-view #modal-view-sub .img-carousel img {
-    max-height: 40rem;
+    max-height: min(64rem, 80vh);
   }
 }
-@media (min-width: 2561px) {
+@media (max-height: 1079px) {
   #modal-view #modal-view-sub .img-carousel {
-    height: 48rem;
+    max-height: min(48rem, 65vh);
   }
-  #modal-view #modal-view-sub .img-carousel img {
-    max-height: 48rem;
+}
+@media (max-height: 800px) {
+  #modal-view #modal-view-sub .img-carousel {
+    max-height: min(48rem, 60vh);
+  }
+}
+@media (min-width: 2560px) {
+  #modal-view #modal-view-sub {
+    width: min(90%, 96rem);
+  }
+}
+@media (min-width: 3840px) {
+  #modal-view #modal-view-sub {
+    width: min(90%, 112rem);
   }
 }
 @media (max-width: 1280px) {
@@ -656,8 +674,6 @@ textarea {
   }
   #section-0 {
     width: 90%;
-    flex-wrap: nowrap;
-    justify-content: space-between;
   }
   #section-1 {
     width: 90%;
@@ -667,16 +683,10 @@ textarea {
     text-align: left;
   }
   #modal-view #modal-view-sub {
-    width: 80%;
+    width: 90%;
   }
   #modal-view #modal-view-sub .title-date h1 {
     text-align: left;
-  }
-  #modal-view #modal-view-sub .img-carousel {
-    height: 24rem;
-  }
-  #modal-view #modal-view-sub .img-carousel img {
-    max-height: 24rem;
   }
   #modal-view #modal-view-sub .drawing-info h1 {
     text-align: left;
@@ -684,8 +694,8 @@ textarea {
 }
 @media (max-width: 960px) {
   #main h1 {
-    margin: 20px 0px 20px 0px;
-    font-size: 3rem;
+    margin: 40px 0px 30px 0px;
+    font-size: 2.5rem;
   }
   #section-0 {
     flex-direction: column;
@@ -696,19 +706,19 @@ textarea {
     width: 90%;
   }
   #section-0 div label {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   #section-0 div button {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   #section-0 div .menu {
-    transform: translate(-2.75rem, 3rem);
+    width: 100%;
   }
   #section-0 div .menu button {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
   #section-0 div .menu button.last {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   #section-1 .card .title-date h1 {
     margin: 0px;
@@ -721,10 +731,10 @@ textarea {
     font-size: 0.9rem;
   }
   #modal-view #modal-view-sub {
-    width: 90%;
+    width: 95%;
   }
   #modal-view #modal-view-sub .title-date h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   #modal-view #modal-view-sub .title-date .date {
     font-size: 1rem;
@@ -733,15 +743,12 @@ textarea {
     font-size: 0.9rem;
   }
   #modal-view #modal-view-sub .drawing-info p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 640px) {
   #section-0 div {
     width: 95%;
-  }
-  #section-0 div .menu {
-    transform: translate(-1rem, 3rem);
   }
   #section-1 {
     grid-template-columns: repeat(1, 1fr);
@@ -755,7 +762,7 @@ textarea {
     width: 95%;
   }
   #modal-view #modal-view-sub {
-    width: 95%;
+    width: 97.5%;
   }
 }
 

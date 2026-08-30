@@ -40,6 +40,16 @@ body {
   background-color: var(--body-background-color);
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  flex: 1;
+}
+
 .hidden {
   display: none;
 }
@@ -50,6 +60,7 @@ body {
 
 #main {
   max-width: 72rem;
+  width: min(72rem, 100%);
   margin: 0 auto;
 }
 
@@ -304,6 +315,50 @@ span {
 @media (max-width: 480px) {
   #section-0 {
     width: 95%;
+  }
+}
+#footer {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  bottom: 0px;
+}
+#footer #footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  max-width: 72rem;
+  margin: 25px 10px 5px 10px;
+}
+#footer #footer-container h1 {
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 2em;
+  margin: 0px;
+}
+#footer #footer-container p {
+  color: var(--secondary-color);
+  margin: 12px 0px 16px 0px;
+}
+#footer #footer-container a {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin: 10px 0px;
+}
+#footer #footer-container a:hover {
+  color: var(--accent-color);
+  transition: background-color 0.3s ease;
+  background-color: var(--a-background-color);
+}
+
+@media (max-width: 960px) {
+  #footer-container a {
+    font-size: 1.5rem;
   }
 }
 #section-1 {
@@ -582,7 +637,7 @@ span {
 }
 
 #section-3 {
-  margin: 2rem 0px;
+  margin: 2rem 0px 40px 0px;
 }
 #section-3 p {
   color: var(--secondary-color);
@@ -609,7 +664,7 @@ span {
   border-color: var(--selected-color-full);
 }
 #section-3 button {
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
 }
 
 #modal-view {
@@ -748,7 +803,7 @@ span {
 }
 @media (max-width: 960px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   #section-1 p {
     font-size: 1.2rem;
@@ -757,7 +812,7 @@ span {
     height: 4rem;
   }
   #section-1 button span {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   #section-2 p {
     font-size: 1.2rem;

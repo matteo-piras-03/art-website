@@ -40,6 +40,16 @@ body {
   background-color: var(--body-background-color);
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  flex: 1;
+}
+
 .hidden {
   display: none;
 }
@@ -50,6 +60,7 @@ body {
 
 #main {
   max-width: 72rem;
+  width: min(72rem, 100%);
   margin: 0 auto;
 }
 
@@ -220,6 +231,7 @@ textarea {
   height: 200px;
   display: flex;
   justify-content: center;
+  bottom: 0px;
 }
 #footer #footer-container {
   display: flex;
@@ -303,26 +315,34 @@ li {
   width: 45%;
   margin: 10px;
 }
+#section-0 #section-0-right h1 {
+  margin: 2rem 0px;
+}
+#section-0 #section-0-right h1.socials {
+  margin-bottom: 1rem;
+}
 #section-0 #section-0-right .buttons-list {
   padding: 0px;
   margin: 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  column-gap: 0.5rem;
 }
 #section-0 #section-0-right .buttons-list li {
+  box-sizing: border-box;
   margin: 8px 0px;
-  height: 32px;
-  width: 200px;
+  height: 3rem;
+  width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #section-0 #section-0-right .buttons-list li .button {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 5px;
   border-radius: 5px;
   font-size: 1.25rem;
   text-decoration: none;
@@ -331,10 +351,14 @@ li {
   align-items: center;
   color: var(--secondary-color);
 }
-#section-0 #section-0-right .buttons-list li .button:hover {
-  transition: background-color 0.3s ease;
-  background-color: var(--a-background-color);
-  color: var(--accent-color);
+#section-0 #section-0-right .buttons-list li .button:hover .icon {
+  color: var(--selected-color-full);
+}
+#section-0 #section-0-right .buttons-list li .button .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
 }
 
 #section-1 {
@@ -424,6 +448,10 @@ li {
   padding: 0px;
 }
 
+#svg-sprites path {
+  fill: #ff0000;
+}
+
 @media (max-width: 1280px) {
   #section-0 {
     width: 90%;
@@ -439,7 +467,7 @@ li {
     margin: 0px auto;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   #section-0 {
     flex-direction: column;
   }
@@ -470,8 +498,12 @@ li {
     margin-top: 30px;
   }
   #section-1 h1 {
-    font-size: 2.75rem;
-    margin: 1rem 0px;
+    font-size: 2.5rem;
+    margin: 40px 0px 30px 0px;
+    text-align: center;
+  }
+  #section-1 .gallery li a img {
+    height: 32rem;
   }
   #modal-view img {
     max-width: 90%;
