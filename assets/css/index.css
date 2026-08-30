@@ -448,10 +448,6 @@ li {
   padding: 0px;
 }
 
-#svg-sprites path {
-  fill: #ff0000;
-}
-
 @media (max-width: 1280px) {
   #section-0 {
     width: 90%;
