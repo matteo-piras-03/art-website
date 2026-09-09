@@ -1,8 +1,8 @@
 {
     "handle": "digitalvol2",
-    "date": "2026-06-13",
+    "date": "2026-09-07",
     "title": "Digital Drawings Vol.2",
-    "thumbnail-id": "02",
+    "thumbnail-id": "06",
     "tags": [],
     "mediums": ["Digital"],
     "drawings": [
@@ -35,6 +35,12 @@
             "title": "Duek",
             "date": "2026-06-13",
             "caption": "A gift for Duek, since he was feeling down at that time."
+        },
+        {
+            "id": "06",
+            "title": "Light shower",
+            "date": "2026-09-07",
+            "caption": "A bit of an unusual painting, made mostly because I didn't know what to do."
         }
     ]
 }

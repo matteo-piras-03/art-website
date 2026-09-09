@@ -1,1 +1,3 @@
-Draw a non-hooved quadruped from reference using construction techniques, by identifying the major masses. For detailed instructions, click [here](https://drawabox.com/lesson/5/1).
+Official lesson page [here](https://drawabox.com/lesson/5/1).
+
+Draw a non-hooved quadruped from reference using animal construction techniques taught in Lesson 5, by identifying the major masses.
