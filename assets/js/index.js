@@ -3,7 +3,7 @@ const img_list = [
     "https://media.piras03.com/image/af2026/09.jpg",
     "https://media.piras03.com/image/af2026/07.jpg",
     "https://media.piras03.com/image/dabcelebration/05.jpg",
-    "https://media.piras03.com/image/af2026/05.jpg",
+    "https://media.piras03.com/image/digitalvol2/07.jpg",
     "https://media.piras03.com/image/af2026/03.jpg",
     "https://media.piras03.com/image/af2026/04.jpg",
     "https://media.piras03.com/image/af2026/01.jpg",
